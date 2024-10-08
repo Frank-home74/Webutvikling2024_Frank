@@ -1,0 +1,99 @@
+main {
+    /* Hva: Setter bakgrunnsbildet til hovedseksjonen. */
+    /* Hvordan: Bruker et bilde fra 'sprites' katalogen, skalerer det slik at det passer innenfor containeren uten å bli strukket. */
+    /* Hvorfor: Gir siden en bakgrunn som passer til Super Mario temaet. */
+    background-image: url('../sprites/bakgrunn.jpg');
+    background-size: contain;
+    height: 500px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@keyframes runningMario {
+    /* Hva: Definerer en animasjon som veksler mellom to bilder av Mario som står stille og løper. */
+    /* Hvordan: Bruker en bakgrunnsbildesekvens for å gi illusjonen av at Mario løper. */
+    /* Hvorfor: Veksling mellom disse bildene skaper en animasjon som simulerer bevegelse av Mario. */
+    from { background-image: url('../sprites/staa.png'); }
+    to { background-image: url('../sprites/lopende.png'); }
+}
+
+@keyframes movingMario {
+    /* Hva: Definerer en animasjon for å flytte Mario horisontalt og simulere et hopp. */
+    /* Hvordan: Animasjonen flytter Mario fra venstre til høyre og endrer hans vertikale posisjon for å simulere hopp. */
+    /* Hvorfor: Gir Mario en realistisk bevegelse ved å inkludere både horisontal forflytning og et hopp i banen. */
+    0% { left: 0; bottom: 53px; }
+    20% { left: 407px; bottom: 53px; }
+    40% { left: 407px; bottom: 117px; }
+    50% { left: 407px; bottom: 53px; }
+    60% { bottom: 53px; left: 575px; }
+    70% { bottom: 200px; }
+    100% { bottom: 53px; left: 800px; }
+}
+
+@keyframes marioDies {
+    /* Hva: Animasjon som simulerer at Mario dør. */
+    /* Hvordan: Endrer Mario til et "dødsbilde", flytter ham oppover og roterer ham for å simulere et fall. */
+    /* Hvorfor: Gir en dramatisk effekt som visualiserer når Mario dør i spillet. */
+    0% {
+        background-image: url('../sprites/dead.png');
+        bottom: 53px;
+        left: 800px;
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        bottom: 150px;
+        transform: rotate(-45deg) scale(1.8);
+        background-image: url('../sprites/dead.png');
+    }
+}
+
+@keyframes runningGompa {
+    /* Hva: Definerer en animasjon for en fiende (Gompa) som veksler mellom to bilder. */
+    /* Hvordan: Bytter mellom to bilder av Gompa for å skape en animasjon som viser bevegelse. */
+    /* Hvorfor: Gir en animasjonseffekt til fienden, slik at den ser levende ut og i bevegelse. */
+    from { background-image: url('../sprites/sopp.png'); }
+    to { background-image: url('../sprites/sopp-kopi.png'); }
+}
+
+@keyframes movingGompa {
+    /* Hva: Flytter Gompa fra høyre til venstre. */
+    /* Hvordan: Animasjonen flytter Gompa horisontalt over skjermen. */
+    /* Hvorfor: Gir illusjonen av at fienden (Gompa) beveger seg mot Mario. */
+    from { right: 0; }
+    to { right: 347px; }
+}
+
+#supermario {
+    /* Hva: Definerer stil og animasjoner for Super Mario figuren. */
+    /* Hvordan: Setter størrelse, posisjon og bakgrunnsbilde, samt flere animasjoner for å kontrollere hans bevegelse. */
+    /* Hvorfor: Gir Mario sin visuelle stil og definerer hvordan han beveger seg og reagerer på ulike hendelser i spillet. */
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 53px;
+    animation-name: runningMario, movingMario, marioDies;
+    animation-iteration-count: infinite, 1, 1;
+    animation-duration: 0.5s, 3s, 0.8s;
+    animation-fill-mode: none, forwards, forwards;
+    animation-delay: 0s, 0s, 3s;
+    z-index: 999;
+}
+
+#gompa {
+    /* Hva: Definerer stil og animasjoner for Gompa fienden. */
+    /* Hvordan: Angir størrelse, posisjon, og knytter den til animasjonene for bevegelse og bevegelse av bildesekvenser. */
+    /* Hvorfor: Gir Gompa en visuell stil og bevegelsesanimasjon for å gjøre den mer interaktiv i spillet. */
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 53px;
+    right: 0;
+    animation-name: runningGompa, movingGompa;
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 0.5s, 1s;
+    animation-direction: normal, alternate;
+}

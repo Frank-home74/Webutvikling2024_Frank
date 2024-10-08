@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Resistreringsskjema</title>
+</head>
+<body>
+    <header>
+        <h1>Registreringsskjema</h1>
+    </header>
+    <main>
+
+         
+        <section id="form">
+            <h4>Fyll ut informasjonen under</h4>
+            <form action="#" method="post">
+                <label for="navn">Navn:</label><br>
+                <input type="text" id="navn" name="navn" pattern="[A-Za-zæøåÆØÅ ]{2,}" required><br><br>
+    
+                <label for="epost">E-post:</label><br>
+                <input type="email" id="epost" name="epost" required><br><br>
+    
+                <label for="passord">Passord:</label><br>
+                <input type="password" id="passord" name="passord" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+    
+                <label for="alder">Alder:</label><br>
+                <input type="number" id="alder" name="alder" min="18" max="99" required><br><br>
+    
+                <label for="telefon">Telefonnummer:</label><br>
+                <input type="tel" id="telefon" name="telefon" pattern="[0-9]{8,12}" required><br><br>
+    
+                <label for="fodselsdato">Fødselsdato:</label><br>
+                <input type="date" id="fodselsdato" name="fodselsdato" max="2023-12-31" required><br><br>
+    
+                <label>Kjønn:</label><br>
+                <input type="radio" id="mann" name="kjonn" value="Mann" required>
+                <label for="mann">Mann</label><br>
+                <input type="radio" id="kvinne" name="kjonn" value="Kvinne" required>
+                <label for="kvinne">Kvinne</label><br>
+                <input type="radio" id="annet" name="kjonn" value="Annet" required>
+                <label for="annet">Annet</label><br><br>
+    
+                <label for="land">Land:</label><br>
+                <select id="land" size="3" name="land" required>
+                    <option value="Norge" >Norge</option>
+                    <option value="Sverige">Sverige</option>
+                    <option value="Danmark">Danmark</option>
+                    <option value="Mars">Mars</option>
+                    
+                </select><br><br>
+            
+    
+                <label for="personvern">Jeg godtar personvern:</label>
+                <input type="checkbox" id="personvern" name="personvern" required><br><br>
+    
+                <input type="submit" value="Send inn">
+             </form>
+        </section>
+
+    </main>    
+    <aside>
+        <section>
+            <h4>Om meg</h4>
+            <p>Mitt navn er Frank Haagensen, og jeg lærer HTML.</p>
+        </section>
+    </aside>
+
+      <footer>
+        <p>&copy; 2023 Frank Haagensen. Alle rettigheter forbeholdt.</p>
+        <a href="index.html">Hjem</a>
+    </footer>
+</body>
+</html>

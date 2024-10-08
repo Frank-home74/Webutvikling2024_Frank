@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+.main-banner {
+    background-color: #08efef;
+    padding: 2rem 1rem;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.main-banner h1{
+    color: #007BFF;
+}
+
+.main-banner h1 span{
+    color: red;
+}
+
+nav {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
