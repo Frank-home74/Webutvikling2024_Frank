@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css"> 
+        <link href="fonts/css/fontawesome.css" rel="stylesheet" />
+        <link href="fonts/css/brands.css" rel="stylesheet" />
+        <link href="fonts/css/solid.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css">
         <title>Zalando Light | Forside</title>
     </head>
     <body>
@@ -11,7 +14,8 @@
             <header id="global-header">
                 <img id="main-logo" src="img/Zalando-Logo.png" alt="Nettsted logo">
                 <nav class="flex-space-b">
-                    <ul class="flex-menu">
+                    <i class="fa-solid fa-burger"></i>
+                    <ul class="flex-menu" id="menu">
                         <li><a href="#">Nyheter</a></li>
                         <li><a href="#">Nordisk stil</a></li>
                         <li><a href="#">Klær</a></li>
@@ -97,5 +101,14 @@
             </main>
             <footer>Zalando Light 2024</footer>
         </div>
+        <script>
+            let toggleMenu = ()=>{
+                let x = dokument.getElementByID("menu")
+                if(x.style.displa == "flex"){
+                    x.style.display = "none"
+                else    
+                }
+            }
+        </script>
     </body>
 </html>
