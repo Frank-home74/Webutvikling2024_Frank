@@ -1,0 +1,24 @@
+// Hva: Definerer en CSS-klasse for å sentrere innholdet i en fleksibel container
+// Hvordan: Bruker flexbox for å sentrere elementer både horisontalt og vertikalt innenfor containeren
+// Hvorfor: Dette gjør at innholdet alltid er plassert i midten av containeren, noe som er nyttig for layout der elementer skal være sentrert i høyden og bredden
+
+.flex-container-center{
+    display: flex; // Setter display-egenskapen til flex for å aktivere flexbox-layout
+    justify-content: center; // Sentrerer innholdet horisontalt innenfor containeren
+    align-items: center; // Sentrerer innholdet vertikalt innenfor containeren
+    height: 100%; // Sørger for at containeren har full høyde
+}
+
+
+/*
+// Hva: Utvider klassens stiler i et annet element, i dette tilfellet for et <i>-element i en label
+// Hvordan: Bruker @extend for å kopiere stilene fra .flex-container-center inn i <i>-elementet
+// Hvorfor: Dette brukes for å sikre at <i>-elementet er sentrert både horisontalt og vertikalt inne i label, som er viktig for å plassere ikonet på en estetisk måte
+
+Denne finnes og brukes i _loginn.scss
+label i{
+    @include box(50px, 50px, 0.5rem, 100%); // Setter størrelsen på ikonet
+    @extend .flex-container-center; // Sentrerer ikonet horisontalt og vertikalt
+    display: flex !important; // Sørger for at flexbox brukes, selv om andre stiler prøver å overstyre det
+}
+*/

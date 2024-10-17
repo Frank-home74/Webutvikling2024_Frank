@@ -1,0 +1,15 @@
+// Hva: Importerer skrifttyper fra Google Fonts (Montserrat og Roboto)
+// Hvordan: Bruker @import-regelen med en URL som peker til Google Fonts API
+// Hvorfor: Dette gjør at vi kan bruke tilpassede fonter som Montserrat og Roboto i prosjektet, noe som gir bedre typografisk kontroll og visuell stil
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Hva: Definerer en SCSS-variabel for hovedfonten
+// Hvordan: Variabelen $mainFont settes til fonten "Roboto" med sans-serif som fallback
+// Hvorfor: For å bruke Roboto som hovedfont i prosjektet, og hvis Roboto ikke er tilgjengelig, vil sans-serif være reservefonten
+$mainFont: "Roboto", sans-serif;
+
+// Hva: Definerer en SCSS-variabel for sekundærfonten
+// Hvordan: Variabelen $sekundarFont settes til fonten "Montserrat" med sans-serif som fallback
+// Hvorfor: For å bruke Montserrat som en sekundærfont, kanskje for overskrifter eller andre elementer som trenger en annen typografisk stil enn hovedinnholdet
+$sekundarFont: "Montserrat", sans-serif;
