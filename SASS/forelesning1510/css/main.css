@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.flex-container-center, form label i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/*
+// Hva: Utvider klassens stiler i et annet element, i dette tilfellet for et <i>-element i en label
+// Hvordan: Bruker @extend for å kopiere stilene fra .flex-container-center inn i <i>-elementet
+// Hvorfor: Dette brukes for å sikre at <i>-elementet er sentrert både horisontalt og vertikalt inne i label, som er viktig for å plassere ikonet på en estetisk måte
+
+Denne finnes og brukes i _loginn.scss
+label i{
+    @include box(50px, 50px, 0.5rem, 100%); // Setter størrelsen på ikonet
+    @extend .flex-container-center; // Sentrerer ikonet horisontalt og vertikalt
+    display: flex !important; // Sørger for at flexbox brukes, selv om andre stiler prøver å overstyre det
+}
+*/
+.blurred-effect, form {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+form {
+  color: rgb(35, 35, 35);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 3rem;
+  border-radius: 30px;
+}
+form label {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  background-color: #fff;
+}
+form label i {
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  border-radius: 100%;
+  display: flex !important;
+  width: 50px;
+  background-color: rgb(35, 35, 35);
+  color: #fff;
+}
+form label input {
+  border: none;
+}
+form input {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgb(35, 35, 35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(53, 101, 167);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://picsum.photos/1200/1200");
+  background-size: cover;
+}/*# sourceMappingURL=main.css.map */

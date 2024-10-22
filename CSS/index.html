@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <!-- 
+    <!DOCTYPE html> - Deklarerer dokumenttypen og forteller nettleseren at det er et HTML5-dokument.
+    <html lang="nb"> - Starter HTML-dokumentet og angir språket til norsk ("nb" for norsk bokmål).
+    -->
+    <head>
+        <!-- 
+        <head> - Inneholder metadata om dokumentet, som charset, viewport, og lenker til stilark. 
+        -->
+        <meta charset="UTF-8">
+        <!-- 
+        <meta charset="UTF-8"> - Setter tegnsettet til UTF-8, som støtter de fleste språk og spesialtegn.
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> - Tilpasser siden til skjermstørrelsen til brukeren, spesielt viktig for mobilvennlighet.
+        -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- 
+        <link rel="stylesheet" href="css/style.css"> - Kobler HTML-dokumentet til et eksternt CSS-stilark, hvor sidens design og stil defineres.
+        -->
+        <title>CSS start</title>
+        <!-- 
+        <title>CSS start</title> - Setter tittelen på nettsiden, som vises i fanen til nettleseren.
+        -->
+    </head>
+    <body>
+        <!-- 
+        <body> - Inneholder alt innholdet på nettsiden som vises til brukeren, inkludert tekst, bilder, og interaktive elementer.
+        -->
+        <header>
+            <!-- 
+            <header> - Representerer toppseksjonen på siden, typisk brukt for navigasjon, logoer, eller overskrifter.
+            -->
+            <nav>
+                <!-- 
+                <nav> - Representerer en navigasjonsseksjon, ofte brukt for å liste opp lenker til andre deler av nettsiden.
+                -->
+                <ul>
+                    <!-- 
+                    <ul> - En uordnet liste brukt til å strukturere navigasjonslenkene.
+                    -->
+                    <li>
+                        <!-- 
+                        <li> - Hvert listeelement i <ul>, brukes til å liste opp navigasjonsvalg.
+                        -->
+                        <a href="#">Hjem</a>
+                        <!-- 
+                        <a href="#">Hjem</a> - En lenke som peker til en annen side eller seksjon (her brukt som et eksempel). 
+                        CSS-stilen for <a> brukes her for å style lenkene med fontstørrelse og fjerne understrek.
+                        -->
+                    </li>
+                    <li>
+                        <a href="#">Produkter</a>
+                        <!-- 
+                        <a href="#">Produkter</a> - En annen navigasjonslenke med samme stil som tidligere.
+                        -->
+                    </li>
+                    <li>
+                        <a href="#">Kontakt oss</a>
+                        <!-- 
+                        <a href="#">Kontakt oss</a> - Enda en navigasjonslenke som bruker stilene definert for <a> i CSS.
+                        -->
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="btn">CSS er best!</h1>
+        <!-- 
+        <h1 class="btn">CSS er best!</h1> - En hovedoverskrift med klassen "btn". Klassen btn gir den ekstra stil med padding og bakgrunnsfarge som en knapp.
+        CSS-selektoren h1 og klassen .btn påvirker dette elementet.
+        -->
+        <a href="#" class="btn">Klikk her for mer informasjon</a>
+        <!-- 
+        <a href="#" class="btn">Klikk her for mer informasjon</a> - En lenke som fungerer som en knapp med klassen "btn". CSS-stilen gir den en knappstil med bakgrunnsfarge og padding.
+        Selektoren a.btn gjør lenken mer iøynefallende og brukervennlig som knapp.
+        -->
+        <ul>
+            <!-- 
+            <ul> - En annen uordnet liste, men denne er utenfor navigasjonen. CSS-selektorene for nav ul påvirker ikke denne listen.
+            -->
+            <li>Sko</li>
+            <!-- 
+            <li>Sko</li> - Et listeelement som ikke er påvirket av de spesifikke stilene for navigasjonen.
+            -->
+            <li>Klær</li>
+            <!-- 
+            <li>Klær</li> - Et annet listeelement med standard styling.
+            -->
+            <li>Jakker</li>
+            <!-- 
+            <li>Jakker</li> - Enda et listeelement med grunnleggende stil, da det ikke er innenfor header eller nav.
+            -->
+        </ul>
+    </body>
+</html>

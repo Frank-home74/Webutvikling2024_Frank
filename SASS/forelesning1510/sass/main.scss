@@ -1,0 +1,37 @@
+// Hva: Importerer layout-stiler fra layout.scss
+// Hvordan: Bruker @use-regelen for å laste inn layout.scss-modulen
+// Hvorfor: Dette gjør at vi kan bruke stilene og funksjonene som er definert i layout.scss
+@use 'layout.scss';
+
+// Hva: Importerer stiler relatert til påloggingssiden fra loginn.scss
+// Hvordan: Bruker @use-regelen for å laste inn loginn.scss-modulen
+// Hvorfor: Dette er nyttig for å anvende spesifikke påloggingsstiler fra denne filen
+@use 'loginn.scss';
+
+// Hva: Importerer farger fra en SCSS-fil kalt colors og gjør dem tilgjengelige uten prefiks
+// Hvordan: Bruker @use-regelen og aliaser filen med `as *` for å unngå å måtte bruke filnavnet før fargevariablene
+// Hvorfor: Gjør fargevariabler fra colors.scss tilgjengelige i koden for å opprettholde fargekonsistens
+@use 'colors' as *;
+
+// Hva: Importerer fonter fra en SCSS-fil kalt fonts og gjør dem tilgjengelige uten prefiks
+// Hvordan: Bruker @use-regelen og aliaser filen med `as *` for å slippe å skrive fonts-navnet før fontvariablene
+// Hvorfor: Gir oss enkel tilgang til fontvariablene definert i fonts.scss for å sikre typografisk konsistens
+@use 'fonts' as *;
+
+// Hva: Setter box-sizing til border-box for alle elementer
+// Hvordan: Bruker wildcard-selektor (*) for å anvende box-sizing globalt
+// Hvorfor: Dette gjør at padding og border inkluderes i elementets totalbredde og høyde, noe som gjør det lettere å styre layouten
+*{
+    box-sizing: border-box;
+}
+
+// Hva: Definerer stiler for body-elementet
+// Hvordan: Angir bakgrunnsfarge, høyde, font og bakgrunnsbilde
+// Hvorfor: Dette brukes for å sette en fullhøyde bakgrunn med en spesifikk farge og et bilde, samt anvende den definerte hovedfonten for hele dokumentet
+body{
+    background-color: $blue; // Bruker en blå farge fra colors.scss
+    height: 100vh; // Sikrer at body dekker hele skjermens høyde
+    font-family: $mainFont; // Bruker hovedfonten definert i fonts.scss
+    background-image: url('https://picsum.photos/1200/1200'); // Setter et bakgrunnsbilde med en tilfeldig bilde-URL
+    background-size: cover; // Sørger for at bakgrunnsbildet dekker hele body uten å bli strukket ut av proporsjon
+}

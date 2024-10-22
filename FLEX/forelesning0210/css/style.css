@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+/* 
+Kommentar: 
+- Hva: Setter `box-sizing` til `border-box` for alle elementer.
+- Hvorfor: Dette gjør at padding og border inkluderes i elementets totale bredde og høyde, noe som gir mer forutsigbar layout.
+- Hvordan: Denne regelen sørger for at elementenes størrelser ikke blir påvirket av padding og border, og det forenkler layout-beregningene.
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+/* 
+Kommentar: 
+- Hva: Angir skriftfamilien for hele dokumentet og fjerner standard margin.
+- Hvorfor: Gir en konsekvent og profesjonell typografi, og fjerner uønsket margin for å optimalisere layout.
+- Hvordan: Bruker en enkel font-stack med Arial som førstevalg og fjerner standard margin for å gi kontroll over sidens layout.
+*/
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 
+Kommentar: 
+- Hva: Definerer en container som en fleksibel boks med mulighet for flere linjer.
+- Hvorfor: For å kunne bruke flexbox til å arrangere innholdet horisontalt, med automatisk bryting av elementer til neste linje hvis nødvendig.
+- Hvordan: Flexbox gir en fleksibel og dynamisk layout, og `flex-wrap: wrap` sørger for at elementer brytes til neste linje om nødvendig.
+*/
+
+header, nav, footer {
+    width: 100%;
+}
+/* 
+Kommentar:
+- Hva: Sørger for at header, navigasjon og footer tar opp hele bredden av vinduet.
+- Hvorfor: Dette gir en responsiv layout der disse seksjonene alltid dekker hele skjermen, uavhengig av vinduets størrelse.
+- Hvordan: Setter bredden til 100% slik at de strekker seg over hele tilgjengelige visningsområdet.
+*/
+
+header, nav, main, aside, footer {
+    flex-grow: 1;
+    padding: 1rem;
+}
+/* 
+Kommentar:
+- Hva: Gir alle de nevnte elementene fleksibel vekst i forhold til tilgjengelig plass og legger til 1rem padding.
+- Hvorfor: Gir elementene rom for å vokse dynamisk i forhold til containeren, og legger til en jevn avstand rundt innholdet.
+- Hvordan: `flex-grow: 1` gjør at elementene vokser til å fylle tilgjengelig plass, og padding legger til indre avstand mellom innholdet og kantene på elementet.
+*/
+
+header {
+    background-color: rgb(121, 167, 245);
+}
+/* 
+Kommentar:
+- Hva: Setter bakgrunnsfargen på headeren til en lys blå farge.
+- Hvorfor: Gir headeren en synlig og distinkt farge for å skille den fra andre seksjoner.
+- Hvordan: Angir RGB-fargekoden direkte i `background-color`.
+*/
+
+nav {
+    background-color: rgb(214, 177, 221);
+}
+/* 
+Kommentar:
+- Hva: Angir en lys lilla bakgrunnsfarge for navigasjonsfeltet.
+- Hvorfor: Gir navigasjonsfeltet en tydelig visuell stil som skiller det fra andre elementer.
+- Hvordan: Bruker en RGB-fargekode for å definere en myk, lilla farge.
+*/
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 1rem;
+}
+/* 
+Kommentar:
+- Hva: Stiler listen i navigasjonen med flexbox, fjerner standard margin og padding, og fjerner punktmerking.
+- Hvorfor: Flexbox brukes til å organisere listeelementene horisontalt, og `gap` gir avstand mellom dem. Fjerning av punktmerking og padding gir et renere design.
+- Hvordan: `display: flex` organiserer listeelementene horisontalt, og `gap: 1rem` gir jevn avstand mellom elementene.
+*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(144, 214, 191);
+    width: 70%;
+    min-width: 500px;
+    justify-content: space-between;
+}
+/* 
+Kommentar:
+- Hva: Definerer hovedinnholdsområdet som et flexbox-beholder med grønn bakgrunn, bredde på 70% og minimumsbredde på 500px.
+- Hvorfor: Flexbox gjør at innholdet kan justeres fleksibelt, og `justify-content: space-between` sørger for at innholdet fordeles jevnt med mellomrom mellom elementene.
+- Hvordan: `flex-wrap: wrap` sørger for at innholdet brytes til flere linjer om nødvendig, og min-width sikrer at hovedinnholdet ikke blir for smalt.
+*/
+
+main h2 {
+    width: 100%;
+}
+/* 
+Kommentar:
+- Hva: Sørger for at h2-elementene i main tar opp hele bredden av containeren.
+- Hvorfor: Gjør at overskriftene i hovedinnholdet strekker seg over hele bredden, uansett andre layoutinnstillinger.
+- Hvordan: Setter bredden til 100% slik at h2-elementet okkuperer full bredde.
+*/
+
+main article {
+    width: 30%;
+    min-width: 250px;
+    flex-grow: 1;
+}
+/* 
+Kommentar:
+- Hva: Stiler artikkelblokker i hoveddelen med 30% bredde, en minimumsbredde på 250px og fleksibel vekst.
+- Hvorfor: Dette gir artikler en dynamisk størrelse avhengig av tilgjengelig plass, men sikrer at de ikke blir mindre enn 250px.
+- Hvordan: `flex-grow: 1` tillater at artiklene vokser i forhold til tilgjengelig plass, mens `min-width` begrenser hvor smale de kan bli.
+*/
+
+aside {
+    background-color: rgb(128, 160, 173);
+    width: 30%;
+}
+/* 
+Kommentar:
+- Hva: Stiler sideinnholdet (aside) med en lys blågrønn bakgrunn og en bredde på 30%.
+- Hvorfor: Gjør at sideinnholdet har en tydelig bredde og farge som skiller det fra hovedinnholdet.
+- Hvordan: Setter bredden til 30% slik at det tar opp en tredjedel av plassen ved siden av hovedinnholdet.
+*/
+
+footer {
+    color: #fff;
+    background-color: rgb(53, 53, 53);
+}
+/* 
+Kommentar:
+- Hva: Angir hvit tekstfarge og en mørk grå bakgrunnsfarge for footeren.
+- Hvorfor: Gir footer-en kontrast mellom tekst og bakgrunn for god lesbarhet og et tydelig skille fra resten av siden.
+- Hvordan: Bruker heksadesimal fargekode for hvit og RGB-kode for mørk grå bakgrunn.
+*/

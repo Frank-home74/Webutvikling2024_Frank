@@ -1,0 +1,15 @@
+// Hva: Definerer en CSS-klasse for å skape en uskarp effekt (blurred-effect)
+// Hvordan: Bruker en semi-transparent bakgrunnsfarge og en bakgrunnseffekt med uskarphet (blur)
+// Hvorfor: Gir et moderne, visuelt tiltalende design der bakgrunnselementene forblir synlige, men uskarpe
+
+.blurred-effect{
+    // Hva: Setter bakgrunnsfargen til hvit med 50% gjennomsiktighet
+    // Hvordan: Bruker RGBA-fargemodellen for å spesifisere fargen som hvit (255, 255, 255) med en alfa-verdi på 0.5 for halv gjennomsiktighet
+    // Hvorfor: Skaper en semi-transparent bakgrunn for å la elementene bak skinne gjennom
+    background-color: rgba(255, 255, 255, 0.5);
+
+    // Hva: Anvender en uskarphetseffekt på elementets bakgrunn
+    // Hvordan: Bruker CSS `backdrop-filter`-egenskapen for å gjøre alt bak elementet uskarpt, med en styrke på 10px
+    // Hvorfor: Denne effekten gjør at bakgrunnselementer ser mer defokuserte ut, noe som skaper en fin kontrast mellom forgrunn og bakgrunn
+    backdrop-filter: blur(10px);
+}

@@ -1,0 +1,66 @@
+body {
+    /* 
+    Selektor: body 
+    Denne selektoren målretter hele <body>-elementet på siden, som inneholder alt innhold. 
+    Endringer her påvirker hele dokumentet, som for eksempel å sette standard skrifttype for all tekst på siden.
+    */
+    font-family: arial, helvetica, sans-serif;
+}
+
+header nav ul {
+    /* 
+    Selektor: header nav ul 
+    Denne selektoren målretter <ul>-elementet som er inne i <nav> og <header>. 
+    Den brukes for å style navigasjonsmenyen spesifikt, noe som gjør at stilen bare påvirker lister i headerens navigasjon. 
+    Dette er nyttig for å spesifikt style menyen uten å påvirke andre lister på siden.
+    */
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+h1 {
+    /* 
+    Selektor: h1
+    Denne selektoren målretter alle <h1>-elementer på siden, som er hovedoverskrifter. 
+    Brukes ofte til å gjøre overskriften mer fremtredende med større skriftstørrelse, farger og bakgrunnsfarger. 
+    Dette gir en mer visuelt iøynefallende tittel.
+    */
+    color: rgb(9, 66, 101);
+    font-size: 60px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cadetblue;
+    padding: 2rem;
+}
+
+a {
+    /* 
+    Selektor: a 
+    Denne selektoren målretter alle lenker (<a>-elementer) på siden. 
+    Brukes for å fjerne standard understreking og endre skriftstørrelsen, som gir lenkene et mer rent og moderne utseende.
+    */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a.btn {
+    /* 
+    Selektor: a.btn 
+    Dette er en kombinasjonsselektor som målretter <a>-elementer med klassen "btn". 
+    Klassen ".btn" gjør det mulig å gi spesifikke stiler til lenker som skal fungere som knapper. 
+    Dette sikrer at bare lenker med denne klassen får en knappstil, uten å påvirke andre lenker.
+    */
+    background-color: rgb(34, 34, 34);
+    color: #fff;
+    padding: 2rem;
+    display: inline-block;
+    margin: 10px 0px;
+    /*
+    Kommentarene er til for å forklare hvordan marginer kan spesifikt justeres i forskjellige retninger:
+    margin-top: 10px; - Øvre margin for å gi avstand over knappen.
+    margin-left: 3px; - Venstre margin for ekstra spacing.
+    margin-bottom: 5px; - Nederste margin for avstand under knappen.
+    margin-right: 5px; - Høyre margin for å balansere layouten.
+    */
+}
