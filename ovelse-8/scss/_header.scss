@@ -1,0 +1,11 @@
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: variables.$primary-color;
+    color: #fff;
+  
+    .logo img {
+      max-width: 100px;
+    }
+  }

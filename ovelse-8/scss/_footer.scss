@@ -1,0 +1,21 @@
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: variables.$primary-color;
+    color: #fff;
+  
+    .logo img {
+      max-width: 100px;
+    }
+  
+    .some {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  
+      li {
+        margin: 0 10px;
+      }
+    }
+  }

@@ -1,0 +1,93 @@
+main {
+    padding: 20px;
+  }
+  
+  #welcome-banner {
+    background-image: url('https://picsum.photos/id/1025/1000/400');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  
+    header {
+      position: relative;
+      z-index: 1;
+  
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: variables.$primary-color;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  
+  #categories {
+    @include mixins.grid(3, 20px);
+  
+    article {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+  }
+  
+  #news {
+    .scroll-container {
+      @include mixins.flexbox(row, nowrap, flex-start, stretch);
+      overflow: scroll;
+    }
+  
+    article {
+      margin-right: 10px;
+      position: relative;
+  
+      .fa-heart {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: red;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 10px;
+  
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  
+  #popular {
+    @include mixins.flexbox(row, wrap, flex-start, stretch);
+  
+    article {
+      margin: 10px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
