@@ -1,0 +1,66 @@
+// Hva: Importerer farger fra en SCSS-fil kalt colors og gjør dem tilgjengelige uten prefiks
+// Hvordan: Bruker @use-regelen og aliaser filen med `as *` for å unngå å måtte bruke filnavnet før fargevariablene
+// Hvorfor: Gjør fargevariabler fra colors.scss tilgjengelige i koden for å opprettholde fargekonsistens
+@use 'colors' as *;
+
+// Hva: Importerer mixins fra mixins.scss for gjenbrukbare stilfunksjoner
+// Hvordan: Bruker @use-regelen og aliaser filen med `as *` for å få tilgang til mixins uten filnavnsprefiks
+// Hvorfor: Gir tilgang til gjenbrukbare stilblokker som forenkler komplekse stilregler
+@use 'mixins' as *;
+
+// Hva: Importerer designstiler fra design.scss for overordnet design og tema
+// Hvordan: Bruker @use-regelen for å laste inn design.scss
+// Hvorfor: For å bruke designrelaterte variabler og stiler som kan bidra til konsistent design på tvers av prosjektet
+@use 'design' as *;
+
+// Hva: Importerer layoutstiler fra layout.scss for struktur og plassering
+// Hvordan: Bruker @use-regelen for å laste inn layout.scss
+// Hvorfor: For å kunne bruke layoutrelaterte stilregler og variabler for å håndtere plassering og struktur
+@use 'layout' as *;
+
+
+// Hva: Setter stiler for form-elementet
+// Hvordan: Definerer farge, bruker eksisterende stiler, og anvender mixins for fleksibel layout og dimensjoner
+// Hvorfor: For å skape en godt strukturert og visuelt tiltalende form
+form{
+    color: $black; // Setter tekstfargen til sort, hentet fra colors.scss
+    @extend .blurred-effect; // Utvider formens stiler med en forhåndsdefinert effekt (fra layout)
+    @include flexbox(column, nowrap ,1rem); // Bruker flexbox-mixin for å sette opp en fleksibel layout med kolonner
+    @include box(600px, auto, 3rem, 30px); // Bruker en box-mixin for å sette bredde, høyde, marginer og padding
+
+    // Hva: Stiler for label-elementet inni form
+    // Hvordan: Anvender mixins for å sette opp layout og dimensjoner
+    // Hvorfor: For å skape en strukturert layout med fleksibel plassering av innhold i label-elementet
+    label{
+        @include box(100%, auto, 1rem, 50px); // Setter bredden til 100% og bruker auto for høyden, og spesifiserer padding og margin
+        @include flexbox(row, nowrap, 1rem); // Bruker flexbox-mixin for horisontal layout i label
+        background-color: #fff; // Setter bakgrunnsfargen til hvit
+
+        // Hva: Stiler for i-elementet (ikon) inni label
+        // Hvordan: Anvender mixins for dimensjoner og layout
+        // Hvorfor: For å gi en tydelig, sentrert visuell representasjon for ikonet
+        i{
+            @include box(50px, 50px, 0.5rem, 100%); // Setter ikonet til en firkant på 50x50px med padding og full høyde
+            @extend .flex-container-center; // Utvider eksisterende stiler for å sentrere innhold i ikonet
+            display: flex !important; // Sørger for at flexbox blir brukt selv om andre stiler kan prøve å overstyre
+            width: 50px; // Setter bredden på ikonet til 50px
+            background-color: $black; // Bruker sort bakgrunnsfarge fra colors.scss
+            color: $white; // Bruker hvit tekstfarge fra colors.scss for kontrast
+        }
+
+        // Hva: Stiler for input-felter inni label
+        // Hvordan: Enkelt setter grensen (border) til 'none'
+        // Hvorfor: Fjerner kantlinjer på input-feltene for et renere design
+        input{
+            border: none; // Fjerner kantlinjen rundt input-feltet
+        }
+    }
+
+    // Hva: Stiler for input-elementer direkte i form (utenfor label)
+    // Hvordan: Bruker mixins for dimensjoner og bakgrunnsfarge
+    // Hvorfor: Gir en spesifikk stil til formens input-felt for å skille dem visuelt
+    input{
+        @include box(200px, auto, 1rem, 10px); // Setter bredden på 200px med automatisk høyde, og spesifiserer padding og margin
+        background-color: $black; // Bruker sort bakgrunnsfarge fra colors.scss
+    }
+}

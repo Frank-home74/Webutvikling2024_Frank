@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Definerer dokumenttypen som HTML5 -->
+
+<html lang="nb">
+<!-- Rot-elementet i HTML-dokumentet. 'lang="nb"' angir språket som norsk bokmål. -->
+    <head>
+        <!-- Inneholder metadata om dokumentet, som tittelen, tegnsettet og visningsinnstillinger -->
+        <meta charset="UTF-8">
+        <!-- Setter tegnsettet til UTF-8, som støtter de fleste tegn og symboler. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Kontrollerer visningen på mobile enheter. 'width=device-width' gjør at siden tilpasses skjermbredden, 
+             og 'initial-scale=1.0' setter startzoomen til 100%. -->
+        <title>Kontakt oss</title>
+        <!-- Tittel på siden som vises i nettleserfanen. -->
+    </head>
+    <body>
+        <!-- Dokumentets hovedinnhold. -->
+        <header>
+            <!-- Øvre del av siden, ofte brukt til navigasjon og logoer. -->
+            <a href="index.html">
+                <!-- Hyperlenke til en annen side. 'href="index.html"' angir målsiden. -->
+                <h1>TV</h1>
+                <!-- Overskrift for logo eller hovedtittel. Klikkbar fordi den er inne i en <a>-tagg. -->
+            </a>
+            <nav>
+                <!-- Navigasjonsmeny for lenker. -->
+                <ul>
+                    <!-- Uordnet liste for navigasjonselementer. -->
+                    <li>
+                        <!-- Listeelement for en lenke. -->
+                        <a href="../index.html">Hjem</a>
+                        <!-- Hyperlenke til hjemmesiden. 'href="../index.html"' går ett nivå opp og til index.html. -->
+                    </li>
+                    <li>
+                        <a href="https://www.google.com" target="_blank">Google</a>
+                        <!-- Lenke til Google. 'target="_blank"' åpner lenken i en ny fane. -->
+                    </li>
+                    <li>
+                        <a href="contact.html">Kontakt oss</a>
+                        <!-- Lenke til kontaktsiden. -->
+                    </li>
+                    <li>
+                        <a href="about.html">Om oss</a>
+                        <!-- Lenke til en side som handler om selskapet eller nettstedet. -->
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Hovedinnholdet på siden. -->
+            <section>
+                <!-- Seksjon i hovedinnholdet, kan brukes til å dele opp siden logisk. -->
+                <h2>Kontakt oss</h2>
+                <!-- Underoverskrift for seksjonen. -->
+            </section>
+            <section>
+                <h2>Ta kontakt med oss i dag </h2>
+                <!-- Overskrift for en ny seksjon. -->
+                <form method="post">
+                    <!-- Skjema for brukerinput. 'method="post"' sender data til serveren via POST-metoden. -->
+                    <label for="navn">Navn:</label>
+                    <!-- Label for navnefeltet, koblet til input-feltet via 'for="navn"'. -->
+                    <input type="text" name="navn" placeholder="Nora Nordmann.." id="navn" maxlength="45" required>
+                    <!-- Tekstinput for navn. 
+                         - 'type="text"' angir at det er et tekstfelt.
+                         - 'name="navn"' angir navnet på feltet som sendes til serveren.
+                         - 'placeholder="Nora Nordmann.."' viser eksempeltekst i feltet.
+                         - 'id="navn"' kobler feltet til label med samme 'for'-verdi.
+                         - 'maxlength="45"' begrenser inntastingen til maks 45 tegn.
+                         - 'required' gjør feltet obligatorisk å fylle ut. -->
+
+                    <label>
+                        E-post:
+                        <input type="email" name="email" placeholder="eksempel@hiof.no" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                        <!-- Input for e-postadresse. 
+                             - 'type="email"' angir at input må være en gyldig e-postadresse.
+                             - 'name="email"' sender inputverdien som 'email' til serveren.
+                             - 'placeholder="eksempel@hiof.no"' viser et eksempel på e-postformatet.
+                             - 'pattern' spesifiserer et regulært uttrykk som må matche for å være gyldig e-post.
+                             - 'required' gjør feltet obligatorisk. -->
+                    </label>
+
+                    <label>
+                        Emne:
+                        <input type="text" name="emne" placeholder="Hva handler det om?">
+                        <!-- Tekstinput for emne.
+                             - 'type="text"' indikerer et tekstfelt.
+                             - 'name="emne"' navnet som sendes til serveren.
+                             - 'placeholder="Hva handler det om?"' gir en hinttekst til brukeren. -->
+                    </label>
+
+                    <label>
+                        Melding:
+                        <textarea name="melding" required></textarea>
+                        <!-- Tekstområde for større meldinger.
+                             - 'name="melding"' navnet som sendes til serveren.
+                             - 'required' gjør feltet obligatorisk å fylle ut. -->
+                    </label>
+
+                    <label>
+                        Nei
+                        <input type="radio" name="valg">
+                        <!-- Radio-knapp for valg. 
+                             - 'type="radio"' gir en knapp som lar brukeren velge ett alternativ.
+                             - 'name="valg"' grupperer alle radio-knappene sammen slik at bare én kan velges. -->
+                    </label>
+
+                    <label>
+                        Ja
+                        <input type="radio" name="valg">
+                        <!-- Radio-knapp for et annet valg med samme gruppe. -->
+                    </label>
+
+                    <label>
+                        Kanskje
+                        <input type="radio" name="valg">
+                        <!-- Ytterligere radio-knapp i samme gruppe for valg. -->
+                    </label>
+
+                    <input type="submit" value="Send melding">
+                    <!-- Send-knapp for skjemaet.
+                         - 'type="submit"' sender skjemaet til serveren når den klikkes.
+                         - 'value="Send melding"' angir teksten som vises på knappen. -->
+
+                    <label>
+                        Favoritt mat
+                        <select name="fav">
+                            <!-- Nedtrekksmeny for å velge et alternativ.
+                                 - 'name="fav"' sender valgt verdi som 'fav' til serveren. -->
+                            <option value="Pizza">Pizza</option>
+                            <!-- Valg i nedtrekksmenyen. 'value="Pizza"' er verdien som sendes hvis valgt. -->
+                            <option value="Sushi">Sushi</option>
+                            <!-- Et annet alternativ i nedtrekksmenyen. -->
+                            <option value="Kebab">Kebab</option>
+                            <!-- Et siste alternativ. -->
+                        </select>
+                    </label>
+                </form>
+            </section>
+        </main>
+        <footer>2024 Ann-Charlott</footer>
+        <!-- Sidefoten, vanligvis brukt til informasjon om opphavsrett og kontaktinfo. -->
+    </body>
+</html>

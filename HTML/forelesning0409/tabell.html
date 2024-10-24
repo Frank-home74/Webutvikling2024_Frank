@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Definerer dokumenttypen som HTML5 -->
+<html lang="nb">
+    <!-- Angir språket til dokumentet som norsk -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Angir tegnsettet som UTF-8 for å støtte de fleste språk og spesialtegn -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Angir visningsområdet og skaleringsregler for responsiv design -->
+    <title>HTML tabeller</title>
+    <!-- Setter tittelen på nettsiden som vises i nettleserfanen -->
+    <style>
+        /* CSS-stil for tabellceller og overskrifter */
+        td, th {
+            border: 1px solid #000; /* Setter en svart kantlinje rundt hver celle */
+            padding: 1rem; /* Legger til 1 rem av padding for romslighet */
+            font-family: Arial, Helvetica, sans-serif; /* Angir skrifttype */
+            text-align: left; /* Justerer teksten til venstre */
+        }
+    </style>
+</head>
+<body>
+    <!-- Hovedinnholdet på siden starter her -->
+    <main>
+        <!-- Tabellen starter her -->
+        <table>
+            <!-- Tabellhodet som inneholder overskrifter for hver kolonne -->
+            <thead>
+                <tr>
+                    <!-- Kolonneoverskrifter, noen med colspan for å dekke flere kolonner -->
+                    <th colspan="2"></th> <!-- Tomme celler for å balansere layouten -->
+                    <th>Navn</th> <!-- Kolonne for navn på planetene -->
+                    <th>Masse (Jorden = 1)</th> <!-- Masse i forhold til Jorden -->
+                    <th>Diameter</th> <!-- Diameter på planetene i km -->
+                    <th>Tetthet</th> <!-- Tetthet av planetene -->
+                    <th>Tyngdekraft</th> <!-- Tyngdekraft på overflaten av planetene -->
+                    <th>Antall måner</th> <!-- Antall måner hver planet har -->
+                </tr>
+            </thead>
+            <!-- Tabellen kropp hvor hovedinnholdet ligger -->
+            <tbody>
+                <tr>
+                    <!-- Første rad for terrestriske planeter, dekker flere rader og kolonner -->
+                    <th rowspan="4" colspan="2">Terrestiske planeter</th> <!-- Spenner over fire rader, beskriver kategorien -->
+                    <td>Merkur</td> <!-- Informasjon om planeten Merkur -->
+                    <td>0,055</td>
+                    <td>4879</td>
+                    <td>5,43</td>
+                    <td>3,70</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Venus</td> <!-- Informasjon om Venus -->
+                    <td>12 104</td>
+                    <td>0.815</td>
+                    <td>524</td>
+                    <td>8.87</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Jorden</td> <!-- Informasjon om Jorden -->
+                    <td>12 756</td>
+                    <td>1</td>
+                    <td>5,51</td>
+                    <td>9,80</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Mars</td> <!-- Informasjon om Mars -->
+                    <td>6792</td>
+                    <td>0,107</td>
+                    <td>3,93</td>
+                    <td>3,71</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <!-- Rad for jovianske planeter, som også inneholder underkategorier -->
+                    <th rowspan="4">Jovianske planeter</th> <!-- Spenner over fire rader -->
+                    <th rowspan="2">Gas kjemper</th> <!-- Spenner over to rader for gasskjemper -->
+                    <td>Jupiter</td> <!-- Informasjon om Jupiter -->
+                    <td>142 984</td>
+                    <td>317,8</td>
+                    <td>1,33</td>
+                    <td>24,8</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Saturn</td> <!-- Informasjon om Saturn -->
+                    <td>120 536</td>
+                    <td>95,1</td>
+                    <td>0,69</td>
+                    <td>10,4</td>
+                    <td>83</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Is kjemper</th> <!-- Spenner over to rader for iskjemper -->
+                    <td>Uranus</td> <!-- Informasjon om Uranus -->
+                    <td>51 118</td>
+                    <td>14,6</td>
+                    <td>1,27</td>
+                    <td>8,9</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Neptun</td> <!-- Informasjon om Neptun -->
+                    <td>49 528</td>
+                    <td>17,2</td>
+                    <td>1,64</td>
+                    <td>11,1</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <!-- Rad for dvergplaneter -->
+                    <th colspan="2">Dvergplanet</th> <!-- Dekker to kolonner for kategorien -->
+                    <td>Pluto</td> <!-- Informasjon om Pluto -->
+                    <td>950</td>
+                    <td>0,0022</td>
+                    <td>2,0</td>
+                    <td>0,6</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

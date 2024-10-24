@@ -1,0 +1,20 @@
+// Hva: Definerer en mixin kalt `box` for å sette dimensjoner, padding og avrundede hjørner
+// Hvordan: Tar inn fire parametere: $width, $height, $pad (padding), og $bradius (border-radius)
+// Hvorfor: For å forenkle og gjenbruke stiloppsett for bokser og container-elementer med spesifikke bredder, høyder, padding og avrundede hjørner
+@mixin box($width, $height, $pad, $bradius){
+    width: 100%; // Setter bredden til 100% av containerens tilgjengelige bredde
+    max-width: $width; // Angir en maksimal bredde som er spesifisert av $width-parameteren
+    height: $height; // Setter høyden til verdien gitt i $height
+    padding: $pad; // Setter padding for elementet til verdien gitt i $pad
+    border-radius: $bradius; // Avrunder hjørnene med en radius spesifisert av $bradius
+}
+
+// Hva: Definerer en mixin kalt `flexbox` for å sette opp et flex-layout
+// Hvordan: Tar inn tre parametere: $direction (retning), $wrap (flex-wrap), og $gap (mellomrom mellom flex-elementene)
+// Hvorfor: For å forenkle oppsett av fleksible, responsive layouter ved å bruke flexbox-prinsipper
+@mixin flexbox($direction, $wrap, $gap){
+    display: flex; // Setter display-egenskapen til flex for å aktivere flexbox-layout
+    flex-direction: $direction; // Angir retningen for flex-elementene (f.eks. row eller column) basert på verdien i $direction
+    flex-wrap: $wrap; // Styrer om flex-elementene skal brytes til en ny linje eller ikke, basert på $wrap (f.eks. nowrap eller wrap)
+    gap: $gap; // Setter mellomrommet mellom flex-elementene basert på verdien i $gap
+}
