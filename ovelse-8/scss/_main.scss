@@ -1,4 +1,7 @@
 main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
     padding: 20px;
   }
   
@@ -9,21 +12,12 @@ main {
     color: #fff;
     padding: 50px;
     text-align: center;
-    position: relative;
   
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
   
     header {
-      position: relative;
-      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+
   
       .btn {
         display: inline-block;
@@ -55,6 +49,7 @@ main {
     article {
       margin-right: 10px;
       position: relative;
+      
   
       .fa-heart {
         position: absolute;

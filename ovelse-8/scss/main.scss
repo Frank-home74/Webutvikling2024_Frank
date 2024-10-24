@@ -1,12 +1,19 @@
-@use 'variables';
-@use 'mixins';
-@use 'base';
+
+
+@use 'main.scss';
+@use 'base.scss';
+@use 'footer.scss';
+@use 'header.scss';
+@use 'mixins.scss';
+@use 'nav.scss';
+@use 'variables.scss';
 @use 'header';
-@use 'nav';
-@use 'main';
-@use 'footer';
 
 
-@use 'colors' as*;
-@use 'fonts' as*;
+
+
+
+
+
+
 
