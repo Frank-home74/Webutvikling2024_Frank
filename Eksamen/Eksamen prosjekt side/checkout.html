@@ -9,23 +9,136 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    <header role="banner">
+    <header>
         <form role="search" aria-label="søk"> 
-            <input type="text" name="search" placeholder="Søk etter produkter..." aria-label="Søkefelt" required>
+            <input type="text" name="search" placeholder="Søk etter produkter..." aria-label="Søkefelt" required autocomplete="off">
             <button type="submit" aria-label="Søk">Søk</button> 
         </form>  
-        <nav role="navigation" aria-label="Hovedmeny">
+        <nav aria-label="Hovedmeny">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="product.html">Produkter</a></li>
+                <li><a href="product.html"> Produkter</a></li>
                 <li><a href="index.html" class="logo">LOGO</a></li>
-                <li><a href="checkout.html">Kategorier</a></li>
+                <li><a href="#kategorier">Kategorier</a></li>
                 <li><a href="#footer">Kontakt oss</a></li>
             </ul>
+            <ul>
+                <li>
+                    <a href="#user" aria-label="Logg inn">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.minwebside.com" aria-label="Like">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </li> 
+                <li>
+                    <a href="checkout.html" aria-label="Åpne handlekurven">
+                        <i class="fa-solid fa-cart-shopping"></i>   
+                    </a> 
+                </li>
+            </ul>          
+        </nav>
     </header>
 
-    <footer id="footer" role="contentinfo">
-        <section aria-labelledby="footer-logo">
+    <main aria-label="Hovedinnhold">
+        <h1>Kasse</h1>
+        <!-- Seksjon shoppingbagen -->
+         <section id="shoppingbag" aria-labelledby="shoppingbag-heading">
+            <h2 id="shoppingbag-heading">Shoppingbagen</h2>
+            <ul class="product-cards">
+                <li class="product-card">
+                    <img src="../Eksamen prosjekt side/image/blaser-l.jpg" alt="Produkt 1" />
+                    <h3>Produkt 1</h3>
+                    <p>Pris: 199 Kr</p>
+                    <p>Farge: Blå</p>
+                </li>
+                <li class="product-card">
+                    <img src="../Eksamen prosjekt side/image/bukse-l.png" alt="Produkt 2" />
+                    <h3>Produkt 2</h3>
+                    <p>Pris: 249 Kr</p>
+                    <p>Farge: Rød</p>
+                </li>
+            </ul>
+         </section>
+         <!-- Seksjon 2: personopplysninger -->
+          <section id="personal-info" aria-labelledby="personal-info-heading">
+            <h2 id="personal-info-heading">Personopplysninger</h2>
+            <form>
+                <label for="fornavn">Fornavn:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Fornavn" required >
+
+                <label for="etternavn">Etternavn:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Etternavn" required >
+
+                <label for="adresse">Gateadresse</label>
+                <input type="text" id="adress" name="adress" placeholder="Gateadresse" required >
+
+                <label for="postnummer">Postnummer:</label>
+                <input type="text" id="postcode" name="postcode" placeholder="Postnummer" required >
+
+                <label for="by">Poststed / By:</label>
+                <input type="text" id="city" name="city" placeholder="Poststed / By" required >
+
+                <button type="submit">Lagre</button>
+                <button type="button">Avbryt</button>
+            </form>
+          </section>
+          <!-- Seksjon 3: Levering -->
+          <section id="delivery" aria-labelledby="delivery-heading">
+            <h2 id="delivery-heading">Levering</h2>
+            <form>
+                <fieldset>
+                    <legend>Velg leveringsmetode:</legend>
+                    <label>
+                        <input type="radio" name="delivery" value="express-home" required />  
+                        Ekspress levering hjem (249 Kr)
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="express-pickup" required />
+                        Ekspress-pickup (199 Kr)
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="standard-home" required />
+                        Standard levering hjem (99 Kr)
+                    </label>
+                </fieldset>
+            </form>
+          </section>
+
+          <!--- Seksjon 4: Betaling --->
+          <section id="payment" aria-labelledby="payment-heading">
+            <h2 id="payment-heading">Betaling</h2>
+            <form>
+                <label for="card-number">Kortnummer:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Kortnummer" required >
+
+                <label for="expiry-date">Utløpsdato:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required >
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required >
+
+                <p>Total beløp: 448 Kr</p>
+                <button type="submit">Betal</button>
+
+                <div class="consent">
+                    <label>
+                        <input type="checkbox" name="terms" placeholder="Jeg godtar vilkårene" required />
+                        Ja jeg godtar vilkårene
+
+                        <input type="checkbox" name="newsletter">
+                        Ja takk, send nyhetesbrev til meg
+                    </label>
+                </div>
+                <p>§ Du bekrefter herved at opplysningene og dukumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysniger.</p>
+            </form>
+          </section>
+    </main>
+
+    <footer id="footer">
+        <section>
          <h2 id="footer-logo">Logo og ingress</h2>
          <a href="index.html">LOGO</a>
          <p>Din pålitelige nettbutikk</p>
@@ -34,18 +147,34 @@
          <h2>Snarveier</h2>
          <ul>
              <li><a href="index.html">Hjem</a></li>
-             <li><a href="#populære produkter">Produkter</a></li>
-             <li><a href="#populære kategorier">Kategorier</a></li>
-             <li><a href="#kontakt oss">Kontakt oss</a></li>
+             <li><a href="#populære-produkter">Produkter</a></li>
+             <li><a href="#kategorier">Kategorier</a></li>
+             <li><a href="#kontakt-oss">Kontakt oss</a></li>
          </ul>
         </section> 
         <section id="sosiale-medier" aria-labelledby="sosiale-medier">
          <h2>Sosiale medier</h2>
          <ul>
-             <li><a href="https://instagram.com">Instagram</a></li>
-             <li><a href="https://facebook.com">Facebook</a></li>
-             <li><a href="https://linkedin.com">LinkedIn</a></li>
-             <li><a href="https://pinterest.com">Pinterest</a></li>
+            <li>
+                <a href="https://www.instagram.com" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" aria-label="Facebook">
+                 <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pinterest.com" aria-label="Pinterest">
+                <i class="fa-brands fa-pinterest"></i>
+                </a>
+            </li>       
          </ul>
         </section>
      </footer>
