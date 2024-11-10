@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Velkommen til vår nettbutikk. Her finner du våre mest populære produkter og kategorier."> 
-    <meta name="keywords" content="nettbutikk, produkter, kategorier, anmeldelser">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Legg til Font Awesome for ikoner -->
+    <meta name="keywords" content="nettbutikk, produkter, kategorier, anmeldelser">  
     <title>Forside - nettbutikk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
@@ -19,48 +19,70 @@
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="product.html"> Produkter</a></li>
-                <li><a href="index.html" class="logo">LOGO</a></li>
+            </ul>
+            <ul class = logo>    
+                <li><a href="index.html">LOGO</a></li>
+            </ul>
+            <ul>
                 <li><a href="#kategorier">Kategorier</a></li>
                 <li><a href="#footer">Kontakt oss</a></li>
             </ul>
-            <ul>
-                <li>
-                    <a href="#user" aria-label="Logg inn">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.minwebside.com" aria-label="Like">
-                        <i class="fa-regular fa-heart"></i>
-                    </a>
-                </li> 
-                <li>
-                    <a href="checkout.html" aria-label="Åpne handlekurven">
-                        <i class="fa-solid fa-cart-shopping"></i>   
-                    </a> 
-                </li>
-            </ul>          
-        </nav>
+        </nav>    
+        <ul class="icons">
+            <li>
+                <a href="#user" aria-label="Logg inn">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.minwebside.com" aria-label="Like">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </li> 
+            <li>
+                <a href="checkout.html" aria-label="Åpne handlekurven">
+                    <i class="fa-solid fa-cart-shopping"></i>   
+                </a> 
+            </li>
+        </ul>          
     </header>
 
     <main aria-label="Hovedinnhold">
         <section id="banner" aria-label="Bildebanner">
-            <figure>
-                <img src="../Eksamen prosjekt side/image/header1.jpg" alt="Bilde 1" />
-                <figcaption>Bilde 1 beskrivelse</figcaption>
-            </figure>
-            <figure>   
-                <img src="../Eksamen prosjekt side/image/header2.jpg" alt="Bilde 2" />
-                <figcaption>Bilde 2 beskrivelse</figcaption>
-            </figure>
-            <figure>   
-                <img src="../Eksamen prosjekt side/image/header3.jpg" alt="Bilde 3" />
-                <figcaption>Bilde 3 beskrivelse</figcaption>
-            </figure>
-            <figure>     
-                <img src="../Eksamen prosjekt side/image/header4.jpg" alt="Bilde 4" />
-                <figcaption>Bilde 4 beskrivelse</figcaption>
-            </figure>    
+            <div class="banner-container">
+                <figure class="active">
+                    <img src="image/header1.jpg" alt="Bilde 1" />
+                    <figcaption class="overlay">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                        <p>Aenean id sodales metus. Vivamus ornare elementum lorem, in eleifend ipsum. In in euismod orci.</p>
+                    </figcaption>
+                </figure>
+                <figure>   
+                    <img src="image/header2.jpg" alt="Bilde 2">
+                    <figcaption class="overlay">
+                        <h2>Overskrift 2</h2>
+                        <p>Ingress for bilde 2</p>
+                    </figcaption>
+                </figure>
+                <figure>   
+                    <img src="image/header3.jpg" alt="Bilde 3">
+                    <figcaption class="overlay">
+                        <h2>Overskrift 3</h2>
+                        <p>Ingress for bilde 3</p>
+                    </figcaption>
+                </figure>
+                <figure>     
+                    <img src="image/header4.jpg" alt="Bilde 4">
+                    <figcaption class="overlay">
+                        <h2>Overskrift 4</h2>
+                        <p>Ingress for bilde 4</p>
+                    </figcaption>
+                </figure>        
+                <nav class="navigation">
+                    <button id="prev" class="nav-button" tabindex="0"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="next" class="nav-button" tabindex="0"><i class="fa-solid fa-arrow-right"></i></button>
+                </nav>
+            </div>          
         </section>
         <section id="populære-produkter" aria-label="Populære produkter" aria-labelledby="populære-produkter" tabindex="-1">
             <h1>Våre mest populære produkter</h1>
@@ -73,11 +95,12 @@
              <ul class="product-cards">
                 <li class="product-card">
                     <a href="pruduct.html">
-                    <img src="../Eksamen prosjekt side/image/hat-l.jpg" alt="Produkt 1" aria-label="Produkt 1" />
+                    <img src="image/hat-l.jpg" alt="Produkt 1" aria-label="Produkt 1">
                     <h3>Produktnavn 1</h3>
                     <p>Pris: 199 Kr</p>
+                    </a>
                 </li>
-                <!--- Flere produkter her --->
+                
              </ul>
         </section>
 
@@ -88,19 +111,19 @@
                 <li class="category-card">
                     <h3>Kategori 2</h3>   
                 </li>
-                <!--- Flere kategorier her --->
+                
             </ul>
         </section>
 
         <section id="anmeldelser" aria-labelledby="anmeldelser">
             <h2>Anmeldelser</h2>
-            <article class="review" aria-labelledby="anmeldelser1">
-                <img src="../Eksamen prosjekt side/image/shoe-l.jpg" alt="Anmelder 1">
+            <article class="review" aria-labelledby="anmeldelser">
+                <img src="image/shoe-l.jpg" alt="Passende tekst for bildet">
                 <h3 id="anmeldelse1">Fantastisk produkt</h3>
                 <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
             </article>
-            <article class="review" aria-labelledby="anmeldelser2">
-                <img src="../Eksamen prosjekt side/image/blaser-l.jpg" alt="Anmelder 2">
+            <article class="review" aria-labelledby="anmeldelser">
+                <img src="image/blaser-l.jpg" alt="Passende tekst for bildet">
                 <h3 id="anmeldelse2">Fantastisk produkt</h3>
                 <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
             </article>
@@ -147,6 +170,7 @@
          </ul>
         </section>
      </footer>
+     <script src="script.js"></script>
 </body>
 </html>
 
