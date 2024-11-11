@@ -2,8 +2,10 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 h1 {
@@ -28,7 +30,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
-    background-color: #f8f9fa;
     padding: 20px ;
     align-items: center;
     margin-bottom: 2rem;
@@ -37,24 +38,23 @@ header form {
     grid-column: 1 / 2;
     display: flex;
     align-items: center;
-    padding:1rem 10rem;
+    
 }
 
 header form input {
     padding: 10px ;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+    border-radius: 20px;
+    margin-right: 0;
+    flex: 1;
 }
 
-header form button {
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+header form i {
+    margin-left: -30px;
+    color: #333;
+    pointer-events: none;
 }
+
 
 header nav {
     grid-column: 2 / 3;
@@ -93,16 +93,31 @@ header .logo {
 }
 
 .icons {
-    color: black;
     grid-column: 3 / 4;
     display: flex;
     align-items: center;
     list-style: none;
-    padding:0 10rem;
     margin: 0;
     justify-content: flex-end;
     gap: 1rem;
 }
+
+.icons li {
+    
+}
+
+.icons a {
+    color: #333;
+    font-size: 1rem;
+    transition:transform n 0.3s ease-in-out;
+    margin: 0;
+    display: inline-block;
+}
+
+.icons a:hover {
+    transform: scale(1.5);
+}
+/*Første seksjon for header slutter her*/
 
 #banner { 
     display: flex;
@@ -110,10 +125,10 @@ header .logo {
     justify-content: center;
     position: relative;
     background-color: #f8f9fa;
-    max-width: 1350px;
+    max-width: 100%;
     width: 100%;
     margin: 20px auto;
-    border-radius: 15px; /*Avrundede kanter*/
+    border-radius: 15px; 
     overflow: hidden;
     height: 600px;
 }
@@ -201,7 +216,7 @@ header .logo {
     background: rgba(255, 255, 255, 1);
     color: #007bff;
 }
-/*Her begynner neste selksjon for en overskift, en paragraf og 3 knapper*/
+/*Her begynner neste selksjon for Våre mest populære produkter, overskrift og paragraf. 3 knapper*/
 
 #populære-produkter {
     
@@ -215,7 +230,7 @@ header .logo {
 .filter-buttons {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 0;
 }
 
 .filter-buttons button {
@@ -242,7 +257,7 @@ header .logo {
     grid-row: auto; /* Automatisk højde på rækkerne**/
     gap: 1rem;
     list-style-type:none ;
-    padding: 3rem 3rem 1rem 3rem;
+    padding:3rem 0 3rem 0;  /******/
 }
 
 .product-card {
@@ -284,6 +299,11 @@ header .logo {
     padding: 0 20px 0 20px;
 }
 
+.product-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .favorite-icon {
     position: absolute;
     top: 2%;
@@ -314,12 +334,13 @@ header .logo {
 #populære-kategorier {
     text-align: center;
     padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .category-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);  
+    grid-template-rows: repeat(3, 1fr);  
     gap: 1rem;
     list-style: none;  /* Fjerner punktlisteikonene fra listen */
     padding: 0;
@@ -394,19 +415,21 @@ header .logo {
     width: 100%;
     overflow-x: auto;
     padding: 20px 0;
-    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
-.review {
-    
-   width: 400px;
+.review { 
+   width: 0 0 45%;
+   min-width: 500px;
+   max-width: 500px;
    height: auto;
    border-radius: 15px;
    text-align: start ;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border: 1px solid #333;
    gap: 1rem;
    margin: 10px;
+   padding: 1rem;
+   box-sizing: border-box;
 }
 
 .review img {
@@ -416,6 +439,170 @@ header .logo {
     object-fit: cover;
     padding: 1rem;
 }
+
+/*Seksjon Footer*/
+
+
+
+footer {
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1em;
+    line-height: 0.8;
+    margin: 0;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+.footer-flexbox {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+footer section {
+    flex: 1;
+}
+
+footer .logo {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer ul li i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+#kontakt {
+    text-align: left;
+}
+
+#kontakt a {
+    color: #333;
+    text-decoration: none;
+}
+
+#kontakt ul {
+    padding: 0;
+}
+
+#snarveier a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold; 
+}
+
+
+
+#snarveier ul {
+    padding: 0;
+    text-align: center;
+}
+
+#snarveier li {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+#sosiale-medier {
+    text-align: center;
+}
+
+#sosiale-medier ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+#sosiale-medier li {
+    margin: 0 10px;
+}
+
+#sosiale-medier a {
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+#sosiale-medier a:hover {
+    transform: scale(1.5);    
+}
+
+/*Her begynner "product.html"*/
+
+.product-detail {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}    
+
+.thumbnail-images {
+    grid-column: 1 ;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction:column ;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-images {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 3;
+    display: flex;
+    height: 670px;
+    align-items: center;
+}
+
+.large-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+     
+}
+
+.product-info {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

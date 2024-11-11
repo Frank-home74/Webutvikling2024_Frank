@@ -13,19 +13,19 @@
     <header>
         <form role="search" aria-label="søk"> 
             <input type="text" name="search" placeholder="Søk etter produkter..." aria-label="Søkefelt" required autocomplete="off">
-            <button type="submit" aria-label="Søk">Søk</button> 
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> 
         </form>  
         <nav aria-label="Hovedmeny">
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="product.html"> Produkter</a></li>
+                <li><a href="#populære-produkter"> Produkter</a></li>
             </ul>
             <ul class = logo>    
                 <li><a href="index.html">LOGO</a></li>
             </ul>
             <ul>
-                <li><a href="#kategorier">Kategorier</a></li>
-                <li><a href="#footer">Kontakt oss</a></li>
+                <li><a href="#populære-kategorier">Kategorier</a></li>
+                <li><a href="#kontakt">Kontakt oss</a></li>
             </ul>
         </nav>    
         <ul class="icons">
@@ -103,7 +103,9 @@
                         <span class="favorite-icon"><i class="fa-regular fa-heart"></i></span>
                     </figure>
                     <aside class="product-info">
-                        <h3>Produktnavn 1</h3>
+                        <h3>
+                            <a href="product.html" aria-label="Gå til produkt 1">Cowboy hatt</a>
+                        </h3>
                         <p>Pris: 199 Kr</p>
                     </aside>
                     <aside class="rating">
@@ -123,7 +125,9 @@
                             <span class="favorite-icon"><i class="fa-regular fa-heart"></i></span>
                         </figure>
                         <aside class="product-info">
-                            <h3>Produktnavn 1</h3>
+                            <h3>
+                                <a href="product.html" aria-label="Gå til produkt 1">Bluse</a>
+                            </h3>
                             <p>Pris: 199 Kr</p>
                         </aside>
                         <aside class="rating">
@@ -143,7 +147,9 @@
                             <span class="favorite-icon"><i class="fa-regular fa-heart"></i></span>
                         </figure>
                         <aside class="product-info">
-                            <h3>Produktnavn 1</h3>
+                            <h3>
+                                <a href="product.html" aria-label="Gå til produkt 1">Blazer</a>
+                            </h3>
                             <p>Pris: 199 Kr</p>
                         </aside>
                         <aside class="rating">
@@ -163,7 +169,9 @@
                             <span class="favorite-icon"><i class="fa-regular fa-heart"></i></span>
                         </figure>
                         <aside class="product-info">
-                            <h3>Produktnavn 1</h3>
+                            <h3>
+                                <a href="product.html" aria-label="Gå til produkt 1">Sommer kjole</a>
+                            </h3>
                             <p>Pris: 199 Kr</p>
                         </aside>
                         <aside class="rating">
@@ -183,7 +191,9 @@
                                 <span class="favorite-icon"><i class="fa-regular fa-heart"></i></span>
                             </figure>
                             <aside class="product-info">
-                                <h3>Produktnavn 1</h3>
+                                <h3>
+                                    <a href="product.html" aria-label="Gå til produkt 1">Sko</a>
+                                </h3>
                                 <p>Pris: 199 Kr</p>
                             </aside>
                             <aside class="rating">
@@ -203,7 +213,9 @@
                                 <span class="favorite-icon"><i class="fa-regular fa-heart"></i></span>
                             </figure>
                             <aside class="product-info">
-                                <h3>Produktnavn 1</h3>
+                                <h3>
+                                    <a href="product.html" aria-label="Gå til produkt 1">T-Skjorte</a>
+                                </h3>
                                 <p>Pris: 199 Kr</p>
                             </aside>
                             <aside class="rating">
@@ -271,7 +283,7 @@
             <div class="review-cards">
                 <article class="review" aria-labelledby="anmeldelser">
                     <img src="image/card1.jpg" alt="Passende tekst for bildet">
-                    <h3>Navnet Mitt</h3>
+                    <h3>Emma Sørensen</h3>
                     <span class="stars">   
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
@@ -279,11 +291,11 @@
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                     </span>
-                    <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin sem dolor. Maecenas auctor dignissim ex, a laoreet felis gravida ac. Donec eget magna libero.</p>
                 </article>
                 <article class="review" aria-labelledby="anmeldelser">
                     <img src="image/card2.jpg" alt="Passende tekst for bildet">
-                    <h3>Navnet Mitt</h3>
+                    <h3>Sofie Hansen</h3>
                     <span class="stars">   
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
@@ -291,11 +303,11 @@
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                     </span>
-                    <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
+                    <p>Praesent ullamcorper pretium augue, quis euismod mi semper sed. Vivamus vehicula nulla eget elit efficitur, at mollis sem aliquet. Maecenas fringilla velit arcu, ut sollicitudin leo commodo porta.</p>
                 </article>
                 <article class="review" aria-labelledby="anmeldelser">
                     <img src="image/card3.jpg" alt="Passende tekst for bildet">
-                    <h3>Navnet Mitt</h3>
+                    <h3>Guttorm Jakobsen</h3>
                     <span class="stars">   
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
@@ -303,11 +315,11 @@
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                     </span>
-                    <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
+                    <p>Aliquam sem metus, blandit ornare ligula ac, laoreet consequat erat. Ut commodo congue tellus, vel interdum elit lobortis eu.</p>
                 </article>
                 <article class="review" aria-labelledby="anmeldelser">
                     <img src="image/card4.jpg" alt="Passende tekst for bildet">
-                    <h3>Navnet Mitt</h3>
+                    <h3>Mia Johansen</h3>
                     <span class="stars">   
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
@@ -315,11 +327,11 @@
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                     </span>
-                    <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
+                    <p>Vestibulum tincidunt fringilla augue, ut sagittis elit hendrerit nec. Fusce sed justo fermentum, posuere odio ut, pretium erat.</p>
                 </article>
                 <article class="review" aria-labelledby="anmeldelser">
                     <img src="image/card5.jpg" alt="Passende tekst for bildet">
-                    <h3>Navnet Mitt</h3>
+                    <h3>Max</h3>
                     <span class="stars">   
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
@@ -327,11 +339,11 @@
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                     </span>
-                    <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
+                    <p>Mauris nec augue diam. Etiam at porttitor felis. Nunc finibus augue erat, ut gravida neque sollicitudin nec. Duis ac ligula auctor, malesuada velit a, placerat leo.</p>
                 </article>
                 <article class="review" aria-labelledby="anmeldelser">
                     <img src="image/card6.jpg" alt="Passende tekst for bildet">
-                    <h3>Navnet Mitt</h3>
+                    <h3>Bella</h3>
                     <span class="stars">   
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
                         <span class="star-icon"><i class="fa-solid fa-star"></i></span>
@@ -339,51 +351,78 @@
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                         <span class="star-icon"><i class="fa-regular fa-star"></i></span>
                     </span>
-                    <p>Jeg elsker dette produktet. Det er av høy kvalitet</p>
+                    <p>Sed interdum placerat accumsan. In commodo euismod tempus. Vestibulum ac eleifend ligula. Cras mi est, bibendum a mi sed, commodo tincidunt dolor. Maecenas malesuada.</p>
                 </article>
             </div>    
         </section>
     </main>
-    <footer id="footer">
-        <section>
-         <h2 id="footer-logo">Logo og ingress</h2>
-         <a href="index.html">LOGO</a>
-         <p>Din pålitelige nettbutikk</p>
-        </section>
-        <section id="snarveier" aria-labelledby="snarveier">
-         <h2>Snarveier</h2>
-         <ul>
-             <li><a href="index.html">Hjem</a></li>
-             <li><a href="#populære-produkter">Produkter</a></li>
-             <li><a href="#kategorier">Kategorier</a></li>
-             <li><a href="#kontakt-oss">Kontakt oss</a></li>
-         </ul>
-        </section> 
-        <section id="sosiale-medier" aria-labelledby="sosiale-medier">
-         <h2>Sosiale medier</h2>
-         <ul>
-            <li>
-                <a href="https://www.instagram.com" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com" aria-label="Facebook">
-                 <i class="fa-brands fa-facebook"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.pinterest.com" aria-label="Pinterest">
-                <i class="fa-brands fa-pinterest"></i>
-                </a>
-            </li>       
-         </ul>
-        </section>
+    <footer>
+        <a class="logo" href="index.html">LOGO</a>
+        <p>Din pålitelige nettbutikk</p>
+        <div class="footer-flexbox">
+            <section id="kontakt" aria-labelledby="kontakt">
+                <h3>KONTAKT</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <address>
+                            <p><span class="span">Adresse:</span> BRA Veien 4, 1757 Halden </p>
+                        </address>  
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <aside>
+                            <p><span class="span">Telefon:</span> +47 999 99 999</p>
+                        </aside>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <aside>
+                            <p><span class="span">E-post:</span> <a href="mailto:epost@epost.no">halden@hiof.no</a></p>
+                        </aside>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <aside>
+                            <p><span class="span">Åpningstider:  </span> Stenger 15:00</p>
+                        </aside>
+                    </li>
+                </ul>
+            </section>
+            <section id="snarveier" aria-labelledby="snarveier">
+            <h3>SNARVEIER</h3>
+            <ul>
+                <li><a href="#populære-produkter">Produkter</a></li>
+                <li><a href="#populære-kategorier">Kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontakt oss</a></li>
+            </ul>
+            </section> 
+            <section id="sosiale-medier" aria-labelledby="sosiale-medier">
+                <h3>SOSIALE MEDIER</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </li>       
+                </ul>
+            </section>
+        </div>    
      </footer>
      <script src="script.js"></script>
 </body>
