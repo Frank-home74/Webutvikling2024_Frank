@@ -382,7 +382,40 @@ header .logo {
     grid-area: 3 / 3 / 4 / 4; /* 1x1 */
 }
 
+/*Ny seksjon - produktanmeldelser*/
 
+#anmeldelser {
+
+}
+    
+.review-cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.review {
+    
+   width: 400px;
+   height: auto;
+   border-radius: 15px;
+   text-align: start ;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   gap: 1rem;
+   margin: 10px;
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 1rem;
+}
 
 
 
