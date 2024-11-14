@@ -50,7 +50,9 @@
         <nav aria-label="Brødsmulesti">
             <ul class="breadcrumbs" aria-label="Du er her:">
                 <li><a href="index.html">Hjem</a></li>
+                <i class="fa-solid fa-chevron-right"></i>
                 <li><a href="product-category.html">Kategori</a></li>
+                <i class="fa-solid fa-chevron-right"></i>
                 <li>Produktnavn</li>
             </ul>
         </nav>
@@ -64,50 +66,291 @@
                     <img src="image/thumb1.png" alt="Thumbnail 2" class="thumbnail">
                     <img src="image/thumb1.png" alt="Thumbnail 3" class="thumbnail">
                 </div>
-                <div class="product-class">
+                <article class="product-class">
                     <h2>Produktnavn</h2>
                     <p><a href="brand-link.html">Merkenavn</a></p>
                     <p>Pris: 2649 Kr inkl. mva.</p>
                     <p>Farge: <span>Brun</span></p>
         
-                    <select id="size" name="size">
+                    <select id="size" name="size"> 
                         <option value="" disabled selected hidden>Velg Størrelse</option>
+                        <option value="small">XS</option>
                         <option value="small">S</option>
                         <option value="medium">M</option>
                         <option value="large">L</option>
                         <option value="Xtra-large">XL</option>
                     </select>
-                    <button type="button" aria-label="Legg til i handlekurv">Legg til i handlekurv</button>
-                </div>
+                    <aside class="button-container">
+                        <button class="bt1" type="button" aria-label="Legg til i handlekurv">Legg til i handlekurv</button>
+                        <button class="bt2" type="button" aria-label="Lik dette produktet"><i class="fa-regular fa-heart"></i></button>
+                    </aside> 
+                    <details class="details-section">
+                        <summary>Materiale og vedlikehold <i class="fa-solid fa-plus"></i></summary>
+                        <p>Overmateriale: 95% viskose, 5% elastan</p>:
+                        <p>Materialer ermer: 100% polyester</p>
+                        <p>Materiale: Jersey</p>
+                    </details>
+                    <details class="details-section">
+                        <summary>Produktdetaljer <i class="fa-solid fa-plus"></i></summary>
+                        <p>Epcot is a theme park at Walt Disney World Resort featuring exiting attractions international pavilions, award-winning fireworks and seasonal special events.</p>:
+                    </details> 
+                    <details class="details-section">
+                        <summary>Størrelsetabell <i class="fa-solid fa-plus"></i></summary>
+                        <p>Sjekk hvordan din vanlige størrelse konventerer til andre størrelser i vår størrelseguide. Husk at dette kun er en generell guide o at størrelsene kan variere i forhold til merke og modell.</p>:
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>EU</th>
+                                    <th>INT</th>
+                                    <th>BRYSTVIDDE</th>
+                                    <th>LIVIDDE</th>
+                                    <th>HOFTEMÅL</th>
+                                </tr>
+                                <tr>
+                                    <th>32</th>
+                                    <th>XXS</th>
+                                    <th>76</th>
+                                    <th>63</th>
+                                    <th>85</th>
+                                </tr>
+                                <tr>
+                                    <th>34</th>
+                                    <th>XS</th>
+                                    <th>80</th>
+                                    <th>66</th>
+                                    <th>89</th>
+                                </tr>
+                                <tr>
+                                    <th>36</th>
+                                    <th>S</th>
+                                    <th>84</th>
+                                    <th>69</th>
+                                    <th>93</th>
+                                </tr>
+                                <tr>
+                                    <th>38</th>
+                                    <th>M</th>
+                                    <th>88</th>
+                                    <th>72</th>
+                                    <th>97</th>
+                                </tr>
+                                <tr>
+                                    <th>40</th>
+                                    <th>L</th>
+                                    <th>92</th>
+                                    <th>76</th>
+                                    <th>100</th>
+                                </tr>
+                                <tr>
+                                    <th>42</th>
+                                    <th>XL</th>
+                                    <th>96</th>
+                                    <th>80</th>
+                                    <th>103</th>
+                                </tr>
+                                <tr>
+                                    <th>44</th>
+                                    <th>XXL</th>
+                                    <th>100</th>
+                                    <th>105</th>
+                                    <th>96</th>
+                                </tr>
+                                <tr>
+                                    <th>46</th>
+                                    <th>3XL</th>
+                                    <th>104</th>
+                                    <th>90</th>
+                                    <th>109</th>
+                                </tr>
+                                <tr>
+                                    <th>48</th>
+                                    <th>4XL</th>
+                                    <th>110</th>
+                                    <th>96.5</th>
+                                    <th>114</th>
+                                </tr>
+                                <tr>
+                                    <th>50</th>
+                                    <th>5XL</th>
+                                    <th>116</th>
+                                    <th>103</th>
+                                    <th>119</th>
+                                </tr>
+                                <tr>
+                                    <th>52</th>
+                                    <th>6XL</th>
+                                    <th>122</th>
+                                    <th>109.5</th>
+                                    <th>124</th>
+                                </tr>
+                                <tr>
+                                    <th>54</th>
+                                    <th>7XL</th>
+                                    <th>128</th>
+                                    <th>116</th>
+                                    <th>130</th>
+                                </tr>
+                                <tr>
+                                    <th>56</th>
+                                    <th>8XL</th>
+                                    <th>134</th>
+                                    <th>122.5</th>
+                                    <th>135</th>
+                                </tr>
+                                <tr>
+                                    <th>58</th>
+                                    <th>9XL</th>
+                                    <th>140</th>
+                                    <th>129</th>
+                                    <th>140</th>
+                                </tr>
+                                <tr>
+                                    <th>60</th>
+                                    <th>10XL</th>
+                                    <th>146</th>
+                                    <th>135.5</th>
+                                    <th>145</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </details>
+                       <p class="review-rating">
+                        Anmelderlser 
+                        <span class="star-container">
+                            <details class="popup-details">
+                                <summary class="star-link">
+                                   <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i> 
+                                    <span>32</span>
+                                </summary>
+                                <aside class="popup-box">
+                                    <img src="image/card5.jpg" alt="Passende tekst for bildet">
+                                    <h3>Max</h3>
+                                    <span class="stars">   
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                                    </span>
+                                    <p>Mauris nec augue diam. Etiam at porttitor felis. Nunc finibus augue erat, ut gravida neque sollicitudin nec. Duis ac ligula auctor, malesuada velit a, placerat leo.</p>
+                                </aside>
+                            </details>      
+                        </span>
+                       </p>       
+                </article> 
+        </section>   
+        <section class="produkt-kort">
+            <h2 class="products-header">
+                Relaterte produkter
+                <a href="#" class="related-links">Se flere lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
+            </h2>
         </section>
-        
-       
-        <aside class="related-products">
-            
-            <section class="product-cards">
-                <h2>Relaterte produkter</h2>
-                <article class="product-card">
-                    <img src="image/hat-l.jpg" alt="Relatert produkt 1">
-                    <h3>Relaterte produkt 1</h3>
-                    <p>Pris: 149 Kr</p>
-                </article>
-                <article class="product-card">
-                    <img src="image/blaser-l.jpg" alt="Relatert produkt 2">
-                    <h3>Relaterte produkt 2</h3>
-                    <p>Pris: 179 Kr</p>
-                </article>
-                <article class="product-card">
-                    <img src="image/shoe-l.jpg" alt="Relatert produkt 3">
-                    <h3>Relaterte produkt 3</h3>
-                    <p>Pris: 199 Kr</p>
-                </article>
-                <article class="product-card">
-                    <img src="image/t-shirt-l.jpg" alt="Relatert produkt 4">
-                    <h3>Relaterte produkt 4</h3>
-                    <p>Pris: 159 Kr</p>
-                </article>
-            </section>
-        </aside>
+        <section class="product-container">  
+            <article>
+                <aside class="product-item">
+                    <figure class="image-wrapper">
+                        <img src="image/hat-l.jpg" alt="Relatert produkt 1">
+                        <span class="heart-overlay"><i class="fa-regular fa-heart"></i></span>
+                    </figure>
+                    <h3 class="product-title">
+                        Relaterte produkt 1
+                        <span class="price">Kr 1999</span>
+                    </h3>
+                    <span class="star-rating">   
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="review-count">842 Reviews</span>
+                    </span>    
+                </aside>  
+            </article>
+            <article>
+                <aside class="product-item">
+                    <figure class="image-wrapper">
+                        <img src="image/hat-l.jpg" alt="Relatert produkt 1">
+                        <span class="heart-overlay"><i class="fa-regular fa-heart"></i></span>
+                    </figure>
+                    <h3 class="product-title">
+                        Relaterte produkt 1
+                        <span class="price">Kr 1999</span>
+                    </h3>
+                    <span class="star-rating">   
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="review-count">842 Reviews</span>
+                    </span>    
+                </aside>  
+            </article>
+            <article>
+                <aside class="product-item">
+                    <figure class="image-wrapper">
+                        <img src="image/hat-l.jpg" alt="Relatert produkt 1">
+                        <span class="heart-overlay"><i class="fa-regular fa-heart"></i></span>
+                    </figure>
+                    <h3 class="product-title">
+                        Relaterte produkt 1
+                        <span class="price">Kr 1999</span>
+                    </h3>
+                    <span class="star-rating">   
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="review-count">842 Reviews</span>
+                    </span>    
+                </aside>  
+            </article>
+            <article>
+                <aside class="product-item">
+                    <figure class="image-wrapper">
+                        <img src="image/hat-l.jpg" alt="Relatert produkt 1">
+                        <span class="heart-overlay"><i class="fa-regular fa-heart"></i></span>
+                    </figure>
+                    <h3 class="product-title">
+                        Relaterte produkt 1
+                        <span class="price">Kr 1999</span>
+                    </h3>
+                    <span class="star-rating">   
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="review-count">842 Reviews</span>
+                    </span>    
+                </aside>  
+            </article>
+            <article>
+                <aside class="product-item">
+                    <figure class="image-wrapper">
+                        <img src="image/hat-l.jpg" alt="Relatert produkt 1">
+                        <span class="heart-overlay"><i class="fa-regular fa-heart"></i></span>
+                    </figure>
+                    <h3 class="product-title">
+                        Relaterte produkt 1
+                        <span class="price">Kr 1999</span>
+                    </h3>
+                    <span class="star-rating">   
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="star-icon"><i class="fa-regular fa-star"></i></span>
+                        <span class="review-count">842 Reviews</span>
+                    </span>    
+                </aside>  
+            </article>
+        </section>
     </main>
 
     <footer>
