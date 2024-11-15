@@ -864,9 +864,67 @@ select {
 
 
 
+/*self note, det er footer som har border top!!!! */
+/*Ny side KASSE*/
+
+.kasse {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.kasse-h1 {
+    display: flex;
+    justify-content: center;
+    
+}
 
 
 
+#shoppingbag {
+    margin: 0 auto;
+    max-width: 80%;
+    border: 0.1px solid #777;
+      
+}
+
+#shoppingbag-heading {
+    margin: 0 auto;
+    max-width: 60%; 
+}
+
+#person-informasjon {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+#delivery {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+#payment {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.shoppingbag-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.shopping-img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+.salgskort {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 60%;
+    list-style: none;
+}
 
 
 

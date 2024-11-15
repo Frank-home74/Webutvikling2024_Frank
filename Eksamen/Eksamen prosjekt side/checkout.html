@@ -47,24 +47,31 @@
         </ul>          
     </header>
     <main aria-label="Hovedinnhold">
-        <h1>Kasse</h1>
-       
+        <section class="kasse">
+            <a href="#" class="related-links">Fortsett å handle <i class="fa-solid fa-arrow-right"></i></a>
+            <h1 class="kasse-h1">Kasse</h1>
+        </section>
          <section id="shoppingbag" aria-labelledby="shoppingbag-heading">
-            <h2 id="shoppingbag-heading">Shoppingbagen</h2>
-            <ul class="product-cards">
-                <li class="product-card">
-                    <img src="image/blaser-l.jpg" alt="Produkt 1">
+            <h2 id="shoppingbag-heading">SHOPPINGBAGEN DIN</h2>
+            <article class="salgskort">
+                <aside class="shoppingback-list">
+                    <img class="shopping-img" src="image/blaser-l.jpg" alt="Produkt 1">
+                    
                     <h3>Produkt 1</h3>
                     <p>Pris: 199 Kr</p>
                     <p>Farge: Blå</p>
-                </li>
-                <li class="product-card">
-                    <img src="image/bukse-l.png" alt="Produkt 2">
-                    <h3>Produkt 2</h3>
-                    <p>Pris: 249 Kr</p>
-                    <p>Farge: Rød</p>
-                </li>
-            </ul>
+                    <label for="size-select">Velg Størrelse:</label>
+                    <select id="size-select" name="size">
+                        <option value="xS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="xL">XL</option>
+                    </select>    
+                    <label for="quantity-select">Velg antall:</label>
+                    <input type="number" id="quantity-select" name="quantity" min="1" value="1" style="width: 50px;">                   
+                </aside>    
+            </article>
          </section>
         
           <section id="person-informasjon" aria-labelledby="person-informasjon">
