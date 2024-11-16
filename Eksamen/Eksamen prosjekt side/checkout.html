@@ -47,55 +47,66 @@
         </ul>          
     </header>
     <main aria-label="Hovedinnhold">
+
         <section class="kasse">
             <a href="#" class="related-links">Fortsett å handle <i class="fa-solid fa-arrow-right"></i></a>
             <h1 class="kasse-h1">Kasse</h1>
         </section>
-         <section id="shoppingbag" aria-labelledby="shoppingbag-heading">
-            <h2 id="shoppingbag-heading">SHOPPINGBAGEN DIN</h2>
-            <article class="salgskort">
-                <aside class="shoppingback-list">
-                    <img class="shopping-img" src="image/blaser-l.jpg" alt="Produkt 1">
-                    
+        <section class="outer-container">
+            <h2 class="main-heading">SHOPPINGBAGEN DIN</h2>
+            <aside class="inner-grid">
+                <article class="product-card">
                     <h3>Produkt 1</h3>
                     <p>Pris: 199 Kr</p>
-                    <p>Farge: Blå</p>
-                    <label for="size-select">Velg Størrelse:</label>
-                    <select id="size-select" name="size">
-                        <option value="xS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="xL">XL</option>
-                    </select>    
-                    <label for="quantity-select">Velg antall:</label>
-                    <input type="number" id="quantity-select" name="quantity" min="1" value="1" style="width: 50px;">                   
-                </aside>    
-            </article>
-         </section>
+                    <p>Farge: Orange</p>
+                    <aside class="image-column">
+                        <img class="shopping-img" src="image/blaser-l.jpg" alt="Produkt 1">
+                    </aside>
+                    <aside class="info-column">
+                        <label for="size-select">Størrelse:</label>
+                        <select id="size-select">
+                            <option value="xS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="xL">XL</option>
+                        </select>
+                        <label for="quantity-select">Antall:</label>
+                        <input type="number" id="quantity-select" min="1" value="1">
+                    </aside>
+                    <aside class="icon-column">
+                        <ul class="icon-list">
+                            <li><i class="fa-regular fa-heart"></i></li>
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </ul>
+                    </aside>
+                </article>
+                <!-- Flere produktkort kan legges til her -->
+            </aside>
+        </section>
         
-          <section id="person-informasjon" aria-labelledby="person-informasjon">
-            <h2>Personopplysninger</h2>
-            <form>
-                <label for="fornavn">Fornavn:</label>
-                <input type="text" id="fornavn" name="first-name" placeholder="Fornavn" required >
+        <section id="person-informasjon" aria-labelledby="person-informasjon">
+        <h2>Personopplysninger</h2>
+        <form>
+            <label for="fornavn">Fornavn:</label>
+            <input type="text" id="fornavn" name="first-name" placeholder="Fornavn" required >
 
-                <label for="etternavn">Etternavn:</label>
-                <input type="text" id="etternavn" name="last-name" placeholder="Etternavn" required >
+            <label for="etternavn">Etternavn:</label>
+            <input type="text" id="etternavn" name="last-name" placeholder="Etternavn" required >
 
-                <label for="adresse">Gateadresse</label>
-                <input type="text" id="adresse" name="adress" placeholder="Gateadresse" required >
+            <label for="adresse">Gateadresse</label>
+            <input type="text" id="adresse" name="adress" placeholder="Gateadresse" required >
 
-                <label for="postnummer">Postnummer:</label>
-                <input type="text" id="postnummer" name="postcode" placeholder="Postnummer" required >
+            <label for="postnummer">Postnummer:</label>
+            <input type="text" id="postnummer" name="postcode" placeholder="Postnummer" required >
 
-                <label for="by">Poststed / By:</label>
-                <input type="text" id="by" name="city" placeholder="Poststed / By" required >
+            <label for="by">Poststed / By:</label>
+            <input type="text" id="by" name="city" placeholder="Poststed / By" required >
 
-                <button type="submit">Lagre</button>
-                <button type="button">Avbryt</button>
-            </form>
-          </section>
+            <button type="submit">Lagre</button>
+            <button type="button">Avbryt</button>
+        </form>
+        </section>
          
           <section id="delivery" aria-labelledby="delivery">
             <h2>Levering</h2>
