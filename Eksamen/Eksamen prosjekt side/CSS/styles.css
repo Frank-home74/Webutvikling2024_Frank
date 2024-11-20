@@ -887,32 +887,25 @@ select {
 
 .inner-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 2fr 0.2fr;
     gap: 10px;
     width: 60%;
     margin: 0 auto;
 }
 
-.product-card {
+.product-card1 {
     display: contents;
      
 }
 
-.product-card h3 {
+.product-card1 h3 {
     grid-column: 2;
-    grid-row: 1;
-    
-    
-    
-      
+    grid-row: 1;     
 }
-.product-card p {
+
+.product-card1 p {
     grid-column: 2;
-    grid-row: 1;
-    display: flex;
-    justify-content: start;
-    
-    
+    grid-row: 1;  
 }
 
 
