@@ -49,30 +49,32 @@
     <main aria-label="Hovedinnhold">
 
         <section class="kasse">
-            <a href="#" class="related-links">Fortsett å handle <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="related-links"><i class="fa-solid fa-arrow-left"></i>  Fortsett å handle</a>
             <h1 class="kasse-h1">Kasse</h1>
         </section>
         <section class="outer-container">
-            <h2 class="main-heading">SHOPPINGBAGEN DIN</h2>
+            <h2 class="main-heading">1.SHOPPINGBAGEN DIN</h2>
             <aside class="inner-grid">
                 <article class="product-card1">
-                    <h3>Produkt 1</h3>
-                    <p>Pris: 199 Kr</p>
-                    <p>Farge: Orange</p>
+                    <h3>Product name</h3>
+                    <p class="p1">Kr 199</p>
+                    <p class="p2">Farge: Orange</p>
                     <aside class="image-column">
                         <img class="shopping-img" src="image/blaser-l.jpg" alt="Produkt 1">
                     </aside>
                     <aside class="info-column">
-                        <label for="size-select">Størrelse:</label>
-                        <select id="size-select">
-                            <option value="xS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="xL">XL</option>
-                        </select>
-                        <label for="quantity-select">Antall:</label>
-                        <input type="number" id="quantity-select" min="1" value="1">
+                        <aside class="info-item">
+                            <label for="size-select">Størrelse:</label>
+                            <select class="size-select">
+                                <option value="xS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="xL">XL</option>
+                            </select>
+                            <label for="quantity-select">Antall:</label>
+                            <input type="number" class="quantity-select" min="1" value="1">
+                        </aside>    
                     </aside>
                     <aside class="icon-column">
                         <ul class="icon-list">
@@ -81,85 +83,183 @@
                         </ul>
                     </aside>
                 </article>
+                <article class="product-card1">
+                    <h3>Product name</h3>
+                    <p class="p1">Kr 199</p>
+                    <p class="p2">Farge: Orange</p>
+                    <aside class="image-column">
+                        <img class="shopping-img" src="image/blaser-l.jpg" alt="Produkt 1">
+                    </aside>
+                    <aside class="info-column">
+                        <aside class="info-item">
+                            <label for="size-select">Størrelse:</label>
+                            <select class="size-select">
+                                <option value="xS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="xL">XL</option>
+                            </select>
+                            <label for="quantity-select">Antall:</label>
+                            <input type="number" class="quantity-select" min="1" value="1">
+                        </aside>    
+                    </aside>
+                    <aside class="icon-column">
+                        <ul class="icon-list">
+                            <li><i class="fa-regular fa-heart"></i></li>
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </ul>
+                    </aside>
+                </article>
+                <article class="product-card1">
+                    <h3>Product name</h3>
+                    <p class="p1">Kr 199</p>
+                    <p class="p2">Farge: Orange</p>
+                    <aside class="image-column">
+                        <img class="shopping-img" src="image/blaser-l.jpg" alt="Produkt 1">
+                    </aside>
+                    <aside class="info-column">
+                        <aside class="info-item">
+                            <label for="size-select">Størrelse:</label>
+                            <select class="size-select">
+                                <option value="xS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="xL">XL</option>
+                            </select>
+                            <label for="quantity-select">Antall:</label>
+                            <input type="number" class="quantity-select" min="1" value="1">
+                        </aside>    
+                    </aside>
+                    <aside class="icon-column">
+                        <ul class="icon-list">
+                            <li><i class="fa-regular fa-heart"></i></li>
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </ul>
+                    </aside>
+                </article>
+                
+                
+                
+                
                 <!-- Flere produktkort kan legges til her -->
             </aside>
         </section>
         
         <section id="person-informasjon" aria-labelledby="person-informasjon">
-        <h2>Personopplysninger</h2>
+        <h2>2. DINE OPPLYSNINGER</h2>
         <form>
-            <label for="fornavn">Fornavn:</label>
-            <input type="text" id="fornavn" name="first-name" placeholder="Fornavn" required >
-
-            <label for="etternavn">Etternavn:</label>
-            <input type="text" id="etternavn" name="last-name" placeholder="Etternavn" required >
-
-            <label for="adresse">Gateadresse</label>
-            <input type="text" id="adresse" name="adress" placeholder="Gateadresse" required >
-
-            <label for="postnummer">Postnummer:</label>
-            <input type="text" id="postnummer" name="postcode" placeholder="Postnummer" required >
-
-            <label for="by">Poststed / By:</label>
-            <input type="text" id="by" name="city" placeholder="Poststed / By" required >
-
-            <button type="submit">Lagre</button>
-            <button type="button">Avbryt</button>
+            <p>Leveringsadresse</p>
+            <fieldset class="navn">
+                <label for="fornavn">Fornavn</label>
+                <label for="etternavn">Etternavn</label>
+                <input type="text" id="fornavn" name="first-name" placeholder="Fornavn*" required >
+                <input type="text" id="etternavn" name="last-name" placeholder="Etternavn*" required >
+            </fieldset>    
+            <fieldset class="adresse">    
+                <label for="adresse">Gateadresse</label>
+                <input type="text" id="adresse" name="adress" placeholder="Gateadresse*" required >
+            </fieldset>
+            <fieldset class="postnummer">    
+                <label for="postnummer">Postnummer</label>
+                <label for="by">Poststed</label>
+                <input type="number" class="quantity-select" min="1" value="1752">
+                <input type="text" id="by" name="city" placeholder="Halden*" required >
+            </fieldset>
+            <p class="kontaktinfo">Kontaktinformasjon</p>
+            <fieldset class="kontakt">
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" placeholder="normann@hiof.no*" required >
+            </fieldset>
+            <fieldset class="kontakt">    
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="phone" placeholder="+4749***018" required >
+            </fieldset>
+            <aside class="form-button">
+                <button class="btn1" type="submit">Lagre</button>
+                <button class="btn2" type="button">Avbryt</button>
+            </aside>      
         </form>
         </section>
          
-          <section id="delivery" aria-labelledby="delivery">
-            <h2>Levering</h2>
-            <form>
-                <fieldset>
-                    <legend>Velg leveringsmetode:</legend>
+        <section id="delivery" aria-labelledby="delivery">
+        <h2>3.Levering</h2>
+        <form>
+            <fieldset>
+                <legend>LEVERINGSVALG</legend>
+                <aside class="express-hjem">
+                    <label class="delivery-obtion">
+                        <input type="radio" name="delivery" value="express-home" required >
+                        Ekspress Hjemlevering
+                        <span class="price">(149 Kr)<i class="fa-solid fa-truck-fast"></i></span>
+                    </label>    
                     <label>
-                        <input type="radio" name="delivery" value="express-home" required >  
-                        Ekspress levering hjem (249 Kr)
+                        <h4>3 til 4 Virkedager</h4>
+                        <p>Bestill hverdagen før 08:00* for levering neste arbeidsdag. Leveres hjel til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager. </p>
+                    </label>                        
+                </aside>
+                <aside class="express-pakke">
+                    <label class="delivery-obtion">
+                        <input type="radio" name="delivery" value="express-pickup" required>     
+                        Ekspress Pakke til utleveringsted
+                        <span class="price">(59 Kr)<i class="fa-brands fa-dhl"></i></span>
                     </label>
                     <label>
-                        <input type="radio" name="delivery" value="express-pickup" required >
-                        Ekspress-pickup (199 Kr)
+                        <h4>1-3 Virkedager</h4>
                     </label>
-                    <label>
+                </aside>
+                <aside class="standard">
+                    <label class="delivery-obtion">
                         <input type="radio" name="delivery" value="standard-home" required >
-                        Standard levering hjem (99 Kr)
+                        Standard Hjemlevering
+                        <span class="price">(Gratis)<i class="fa-solid fa-box"></i></span>
                     </label>
-                </fieldset>
-            </form>
-          </section>
-
-        
-          <section id="payment" aria-labelledby="payment-heading">
-            <h2 id="payment-heading">Betaling</h2>
-            <form>
-                <label for="card-number">Kortnummer:</label>
-                <input type="text" id="card-number" name="card-number" placeholder="Kortnummer" required >
-
-                <label for="expiry-date">Utløpsdato:</label>
-                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required >
-
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" placeholder="CVV" required >
-
-                <p>Total beløp: 448 Kr</p>
-                <button type="submit">Betal</button>
-
-                <div class="consent">
                     <label>
-                        <input type="checkbox" name="terms" required >
-                        Ja jeg godtar vilkårene
+                        <h4>5-8 Virkedager</h4>
+                        <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
                     </label>
-                    <label>    
-                        <input type="checkbox" name="newsletter">
-                        Ja takk, send nyhetesbrev til meg
-                    </label>
+                </aside>
+            </fieldset>
+        </form>
+        </section> 
+        <section id="payment" aria-labelledby="payment-heading">
+        <h2 id="payment-heading">4.Betaling</h2>
+        <form>
+            <fieldset class="betaling">
+                <h3>BETAL MED KORT <i class="fa-solid fa-credit-card"></i></h3>
+                <label for="card-number">Kortnummer:</label>
+                <input type="number" class="credit-card" min="1" placeholder="342342*****4435">
+            </fieldset>
+            <fieldset class="card-info">
+                <label for="expiry-date">Utløpsdato:</label>
+                <label for="cvv">CVV:</label>
+                <div class="label-container">
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required >
+                    <span class="overlay-date"><i class="fa-regular fa-calendar"></i></span>
                 </div>
-                <p>§ Du bekrefter herved at opplysningene og dukumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysniger.</p>
-            </form>
-          </section>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required >   
+            </fieldset>
+            <aside class="betal">
+                <p>Å betale inkl. mva.</p>
+                <h2>1199 kr</h2>
+                <button type="submit">Fullfør kjøp</button>
+            </aside>
+            <aside class="consent">
+                <p>Du bekrefter herved at opplysningene og dukumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysniger.</p>
+                <label>
+                    <input type="checkbox" name="terms" required >
+                    Ja jeg godtar vilkårene
+                </label>
+                <label class="consent">        
+                    <input type="checkbox" name="newsletter">
+                    Ja takk, send nyhetesbrev til meg
+                </label>
+            </aside>
+        </form>
+        </section>
     </main>
-
+    
     <footer>
         <a class="logo" href="index.html">LOGO</a>
         <p>Din pålitelige nettbutikk</p>
