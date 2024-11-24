@@ -496,9 +496,6 @@ footer span {
     
 }
 
-footer section {
-    flex: 1;
-}
 
 footer .logo {
     font-weight: bold;
@@ -925,11 +922,11 @@ select {
 }
 .p1 { /*kroner*/
     align-self: flex-start;
-    padding-top: 8.2rem;
+    padding-top: 8.5rem;
 }
 .p2 { /*farge*/
     align-self: center;
-    padding-bottom: 2.8rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -946,9 +943,10 @@ select {
 .image-column {
     grid-column: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 350px;
+    width: 250px;
+    overflow: hidden;
 }
 
 .info-column {
@@ -987,10 +985,11 @@ select {
 }
 
 .shopping-img {
-    width: 230px;
+    width: 100%;
     height: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    max-height: 350px;
+    object-fit: cover;
+    padding-top: 2rem;
 }
 
 /*Dette er layout for form*/
