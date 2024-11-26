@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const figures = document.querySelectorAll('.banner-container figure');
     const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+    const nextButton = document.getElementById('next');
+    const breadcrumbs = document.getElementById('breadcrumbs'); // Velg brødsmule-stien
+
     let currentIndex = 0;
 
     function showFigure(index) {
@@ -22,4 +24,10 @@ const nextButton = document.getElementById('next');
 
     // Vis det første bildet ved oppstart
     showFigure(currentIndex);
+
+    // Sjekk URL-parameter for visning av brødsmule-sti
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('show-breadcrumbs')) {
+        breadcrumbs.style.display = 'flex'; // Vis brødsmule-stien hvis parameteren er til stede
+    }
 });

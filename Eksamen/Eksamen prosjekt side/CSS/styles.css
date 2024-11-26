@@ -121,6 +121,7 @@ header .logo {
     transform: scale(1.5);
 }
 /*Første seksjon for header slutter her*/
+/*Banner seksjon*/
 
 #banner { 
     display: flex;
@@ -133,68 +134,64 @@ header .logo {
     margin: 20px auto;
     border-radius: 15px; 
     overflow: hidden;
-    height: 600px;
+    height: 70vh;
 }
 
 .banner-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 
 .banner-container figure {
-    display: none; /* Skjul billederne ved indlæsning */
+    display: none;
     flex: 1;
     margin: 0;
 }
 
 .banner-container figure.active {
-    display: block; /* Vis det aktive billede */
+    display: block; /* Vis det aktive bildet -notat til meg selv*/
 }
 
 .banner-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .overlay {
-    position: absolute;
-    top: 10%;
-    bottom: 0;
-    left: 0;
-    right: 5%;
     color: white;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: ;
-    align-items: center;
 }
 
 .overlay h2{
-    width: 50%;
-    height: auto;
-    margin-left: 600px;
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    width: 100%;
+    max-width: 50%;
+    text-align: right;
 }
 
 .overlay p{
-    margin-top: 5%;
-    width: 50%;
-    height: auto;
-    margin-left: 600px;
+    position: absolute;
+    bottom: 10rem;
+    right: 4rem;
+    width: 100%;
+    max-width: 50%;
+    text-align: right;
 }
 
 .overlay button {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
     background-color: #f8f9fa;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 15px 15px;
-    margin-right: 4rem;
     border: none;
-
 }
 
 .navigation {  
@@ -213,7 +210,7 @@ header .logo {
    border: none;
    border-radius: 25px;
    cursor: pointer;
-   margin: 0 10px; /* Afstand mellem knapperne */
+   margin: 0 10px; /*Avstand mellom knappene*/
    font-size: 16px;
    min-width: 50px;
    min-height: 50px; 
@@ -229,9 +226,6 @@ header .logo {
     text-align: center;
 }
 
-#populære-produkter h1 {
-    
-}
 
 .filter-buttons {
     display: flex;
@@ -278,7 +272,7 @@ header .logo {
 
 .image-container {
     position: relative;
-    width: calc(100% + 3rem);
+    width: 100%;
     display: flex;
     justify-content: center;
     border-radius: 15px;
@@ -291,7 +285,7 @@ header .logo {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 15px;
     object-fit: cover;
@@ -305,8 +299,8 @@ header .logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 1rem 0 1rem;
-    padding: 0 20px 0 20px;
+    margin: 0 0 0.5rem;
+    padding: 0 1rem;
 }
 
 .product-info a {
@@ -321,11 +315,11 @@ header .logo {
 
 .favorite-icon {
     position: absolute;
-    top: 2%;
-    right: 22%;
+    top: 4%;
+    right: 4%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    padding: 15px;
+    padding: 10px;
     transition: background-color 0.3s;
     z-index: 10;
     cursor: pointer;
@@ -344,7 +338,7 @@ header .logo {
     padding: 0 20px 0 20px;
 }
 
-/*Seksjon våre mest populære kategorier begjynner her*/
+/*Seksjon våre mest populære kategorier begynner her*/
 
 #populære-kategorier {
     text-align: center;
@@ -374,8 +368,6 @@ header .logo {
 
 
 .category-cards li img {
-    top: 0;
-    left: 0;
     border-radius: 25px;
     width: 100%; /* Fyller hele bredden av kortet */
     height: 100%; /* Fyller hele høyden av kortet */
@@ -396,6 +388,8 @@ header .logo {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /*Legger til en effekt for lesbarheten til teksten*/
+
 
 }
 
@@ -586,7 +580,9 @@ footer ul li i {
     display: flex;
     align-items: center;
     margin: 0 auto;
+    width: 100%;
     max-width: 80%;
+    display: none;
 }
 
 .breadcrumbs li {
@@ -634,7 +630,8 @@ footer ul li i {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100%;   
+    margin: 0;
 }
 
 .large-image {
@@ -969,16 +966,16 @@ select {
     width: 60px;
     height: 40px;
     font-size: 14px;
-    
+    width: auto;
 }
 
 .quantity-select {
-    width: 40px;
+    width: 50px;
     font-size: 14px;
-    height: 40px;
+    height: 37px;
     border: 1px solid rgba(0, 0, 0, 0.2); 
-    padding-left: 10px;
-    padding-right: 10px;  
+    padding-left: 5px;
+    padding-right: 5px; 
 }
 
 .icon-column {
@@ -1034,26 +1031,22 @@ select {
 }
 
 .navn label {
-    width: 50%;
+    width: 49%;
     margin-bottom: 5px;
 }
 
 .navn input {
-    width: 50%;
+    width: 49%;
     padding: 8px;
     box-sizing: border-box;
 }
 
-.navn input, .navn label {
-    width: calc(50% - 10px)
-}
 
-.navn input:last-child {
-    margin-right:0 ;
-}
+
+
 
 .navn input:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .adresse {
@@ -1082,14 +1075,18 @@ select {
 }
 
 .postnummer label {
-    width: 50%;
+    width: 49%;
     margin-bottom: 5px;
 }
 
 .postnummer input {
-    width: 50%;
+    width: 49%;
     padding: 8px;
-    box-sizing: border-box;
+    box-sizing: border-box;   
+}
+
+.postnummer input:not(:last-child) {
+    margin-right: 5px;
 }
 
 .kontaktinfo {
@@ -1286,6 +1283,7 @@ select {
 .betaling {
     border: none;
     margin: 0;
+    padding-left: 0;
 }
 
 .betaling input {
@@ -1357,7 +1355,7 @@ select {
     }
 }
 
-@media (max-width: 1300px) { /* Juster bredden etter behov */
+@media (max-width: 1200px) { /* Juster bredden etter behov */
     header {
         max-width: 100%;
         
@@ -1423,6 +1421,51 @@ select {
         max-width: 100%;
     }
 }
+/*HEADER Media-queries - breakpoint 800px*/
+
+@media (max-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+        
+    }
+    header form {
+         display: flex;
+         justify-content: center;
+         width: 80%; 
+         padding: 1rem;
+          
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    header nav ul li {
+         margin: 0 4rem;  
+
+    }
+    .icons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
 
 @media (max-width: 950px) {
     .image-container {
@@ -1430,28 +1473,9 @@ select {
         flex-wrap: wrap;
     }
 }
+
      
 
-
-
-    
-
-
-@media (max-width:750px) {
-    header {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        nav ul {
-            flex-wrap: wrap;
-            flex-direction: column;
-            display: flex;
-            width: 100%;
-
-        }
-    
-    }
-}
 
 @media (max-width: 800px) {
     .category-cardscards {
@@ -1474,3 +1498,70 @@ select {
 
     
 }
+
+/*Banner*/
+@media (max-width: 868px) {
+    #banner {
+        height: auto;
+    }
+    .overlay h2 {
+        position: absolute;
+        top: 0.2rem;
+        right: 2rem;
+        max-width: 80%;
+        
+        text-align:right ;
+    }
+    .overlay p {
+        position: absolute;
+        bottom: 6rem;
+        right: 2rem;
+        max-width: 90%;
+        
+        margin-top: 0;
+        text-align: right;
+    }
+    .overlay button {
+        position: absolute;
+        bottom: 2rem;
+        right: 1rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 605px) {
+    .overlay h2 {
+        font-size: 1.5rem;
+    }
+    .overlay p {
+        font-size: 12px;
+    }
+    .banner-container img {
+        min-height: 400px;
+    }
+}
+/*Seksjon 2 populære produkter*/
+
+@media (max-width: 900px) {
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .product-cards {
+        grid-template-columns: 1fr;
+    }
+}
+/*Seksjon 3 kategorier*/
+
+@media (max-width: 600px) {
+    .category-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .category-cards li img {
+        height: auto;
+    }
+}
+
