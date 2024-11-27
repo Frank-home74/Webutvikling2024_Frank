@@ -87,6 +87,10 @@ header nav ul li a {
     text-decoration: none;
     color: #333;
     padding: 10px;
+    transition:transform 0.3s ease-in-out;
+}
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
 header .logo {
@@ -112,7 +116,7 @@ header .logo {
 .icons a {
     color: #333;
     font-size: 1rem;
-    transition:transform n 0.3s ease-in-out;
+    transition:transform 0.3s ease-in-out;
     margin: 0;
     display: inline-block;
 }
@@ -146,7 +150,7 @@ header .logo {
 .banner-container figure {
     flex: 0 0 auto;
     width: 100%;
-    height: auto;
+    height: 600px;
     margin: 0 auto;
 }
 
@@ -154,87 +158,94 @@ header .logo {
 .banner-container img {
     max-width:1200px;
     width: 100%;
-    height: 600px;
+    height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 2%;
-    color: white;
+    position: relative;
+    padding: 2rem;
+    text-align: right;
+    color: #fff;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    bottom: 32rem; 
+    max-width: 100%;
 }
 .overlay1 {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    padding: 2rem;
+    text-align: left;
+    color: #fff;
     height: 100%;
-    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    top: 0;
+    justify-content: flex-start;
+    bottom: 32rem;
 }
 
+
 .overlay h2{
-    position: absolute;
-    top: -35rem;
-    right: 4rem;
-    width: 100%;
+    padding-top: 4rem;
+    align-self: flex-end;
     max-width: 60%;
-    text-align: right;
+    height: auto;
+    margin: 0;
 }
 .overlay1 h2{
-    position: relative;
-    margin-bottom: 1rem;
-    width: 100%;
-    max-width: 50%;
-    text-align: left;
-    padding-bottom: 11rem;
+    padding-top: 4rem;
+    align-self: flex-start;
+    max-width: 60%;
+    margin: 0;
 }
 
 .overlay p{
-    position: absolute;
-    bottom: 10rem;
-    right: 4rem;
-    width: 100%;
+    margin-top: 5px;
+    align-self: flex-end;
     max-width: 60%;
-    text-align: right;
-    
+    position: relative;
+    margin-bottom: 2rem;    
+    margin-top: 2rem;
 }
 .overlay1 p{
+    margin-top: 5px;
+    align-self: flex-start;
+    max-width: 60%;
     position: relative;
-    margin-bottom: 1rem;
-    width: 100%;
-    max-width: 50%;
-    text-align: left;
-    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem; 
+      
 }
 
 .overlay button {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #f8f9fa;
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    width: 100px;
     border-radius: 50px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: 15px 15px;
-    border: none;
+    align-self: flex-end;
+    transition: backgrond-color 0.3s,transform 0.3s ease-in-out;
 }
 .overlay1 button {
     position: relative;
-    background-color: #f8f9fa;
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    width: 100px;
     border-radius: 50px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: 15px 15px;
-    border: none;
+    align-self: flex-start;
+    transition: backgrond-color 0.3s,transform 0.3s ease-in-out;
+}
+.overlay button:hover,
+.overlay1 button:hover {  
+    transform: scale(1.05);
+      
+
 }
 
 .navigation {  
@@ -775,6 +786,13 @@ select {
 
 .popup-details {
     position: relative;
+
+}
+
+.popup-details:hover {
+    cursor: pointer;
+    color: #333;  
+
 }
 
 .popup-box {
@@ -1027,6 +1045,10 @@ select {
     font-size: 25px;
     padding-top: 5rem;
 }
+.icon-list li i:hover {
+     color: #777;  
+
+}
 
 .shopping-img {
     width: 100%;
@@ -1173,6 +1195,10 @@ select {
     color: #fff;
     background-color: #333;
     margin-bottom: 2rem;
+}
+.betal button:hover {
+    background-color: #666;
+    cursor: pointer;
 }
 
 .consent {
@@ -1474,53 +1500,79 @@ select {
     
 }
 
-/*Banner*/
+/*Banner i-pad*/
 @media (max-width: 868px) {
-    #banner {
+    .banner-container {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: auto;
     }
-    .overlay h2 {
-        position: relative;
-        padding-top: 10rem;
-        right: 10px;
-        max-width: 80%;
-        
-        text-align:right ;
+    .banner-container figure {
+        display: none;
     }
-    .overlay p {
-        position: absolute;
-        bottom: 6rem;
-        right: 2rem;
-        max-width: 90%;
-        
-        margin-top: 0;
-        text-align: right;
-    }
-    .overlay button {
-        position: absolute;
-        bottom: 2rem;
-        right: 1rem;
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 605px) {
-    .overlay h2 {
-        font-size: 1.7rem;
-    }
-    .overlay1 h2 {
-        max-width: 90%;
-    }
-    .overlay1 p {
-        max-width: 90%;
-    }
-    .overlay p {
-        font-size: 12px;
+    .banner-container figure:first-child {
+        display: block;
     }
     .banner-container img {
-        min-height: 400px;
+        max-width: 100%;
+        height: 600px;
     }
+    .overlay {
+        bottom: 35rem;  
+    }
+    .overlay h2 {
+        font-size: 2.3rem;
+        padding-bottom: 3rem;
+        
+    }
+    .navigation {
+        display: none;
+    }
+
 }
+/*Banner mobil*/
+@media (max-width: 550px) {
+    .banner-container {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .banner-container figure {
+        display: none;
+    }
+    .banner-container figure:first-child {
+        display: block;
+    }
+    .banner-container img {
+        max-width: 100%;
+        height: 600px;
+    }
+    .overlay {
+        bottom: 40rem;  
+    }
+    .overlay h2 {
+        font-size: 1.8rem;
+        
+    }
+    .overlay p {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+    .navigation {
+        display: none;
+    }
+    .overlay button {
+        margin-top: 0;
+    }
+    
+
+}
+
+
 /*Seksjon 2 populære produkter*/
 
 @media (max-width: 900px) {
