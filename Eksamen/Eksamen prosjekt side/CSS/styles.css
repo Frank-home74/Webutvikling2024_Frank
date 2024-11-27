@@ -178,7 +178,7 @@ header .logo {
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    top: 5rem;
+    top: 0;
 }
 
 .overlay h2{
@@ -186,7 +186,7 @@ header .logo {
     top: -35rem;
     right: 4rem;
     width: 100%;
-    max-width: 50%;
+    max-width: 60%;
     text-align: right;
 }
 .overlay1 h2{
@@ -195,7 +195,7 @@ header .logo {
     width: 100%;
     max-width: 50%;
     text-align: left;
-    padding-bottom: 2rem;
+    padding-bottom: 11rem;
 }
 
 .overlay p{
@@ -203,7 +203,7 @@ header .logo {
     bottom: 10rem;
     right: 4rem;
     width: 100%;
-    max-width: 50%;
+    max-width: 60%;
     text-align: right;
     
 }
@@ -749,7 +749,6 @@ select {
     border-top: 2px solid #777;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    overflow: hidden;
 }
 
 .details-section summary {
@@ -1481,9 +1480,9 @@ select {
         height: auto;
     }
     .overlay h2 {
-        position: absolute;
-        top: 0.2rem;
-        right: 2rem;
+        position: relative;
+        padding-top: 10rem;
+        right: 10px;
         max-width: 80%;
         
         text-align:right ;
@@ -1507,7 +1506,13 @@ select {
 
 @media (max-width: 605px) {
     .overlay h2 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+    }
+    .overlay1 h2 {
+        max-width: 90%;
+    }
+    .overlay1 p {
+        max-width: 90%;
     }
     .overlay p {
         font-size: 12px;
@@ -1578,5 +1583,177 @@ select {
     .product-class p {
         max-width: 90%;
         margin-top: 10px;
+    }
+}
+/*Shopping bag - Kasse*/
+
+@media (max-width: 750px) {
+    .outer-container {
+        padding: 1rem;
+    }
+    .inner-grid {
+        width: 100%;
+        margin: 0;
+    }
+    .product-card1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 80%;
+        margin: auto;
+    }
+    .product-card1 h3 {
+        order: 1;
+        text-align: center;
+        margin:0;
+        padding: 0;
+    }
+    .product-card1 .p1 {
+        order: 2;  
+        text-align: center; 
+        margin: 0;
+        padding: 0; 
+    }
+    .product-card1 .p2 {  
+        order: 2;  
+        text-align: left;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .image-column {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .shopping-img {
+        max-width: 200px;
+        max-height: 200px;
+        padding-top: 2rem;
+        display: flex;  
+        justify-content: flex-start;  
+        align-items: center;  
+
+    }
+    .info-column {
+        padding-bottom: 1rem;
+        order: 2;
+        width: 100%;
+        
+    }
+    .size-select,
+    .quantity-select {
+        width: 100%;
+        max-width: 50px;
+    }
+    .main-heading {
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        text-align: center;
+        max-width: 100%;
+    }
+    .icon-column {
+        order: 3;
+        padding-bottom:1rem ;
+    }
+    .icon-list {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+}
+/*Seksjon personlig informasjon-input*/
+@media (max-width: 750px) {
+    #person-informasjon {
+        padding: 1rem;
+    }
+    #person-informasjon h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom:1rem ;
+        max-width: 100%;
+    }
+    #person-informasjon form {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .navn fieldset {
+        border: none;
+        margin-bottom: 1rem;
+    }
+    .navn label {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        order: 1;
+    }
+    .navn input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        
+    }
+    .navn input:not(:last-child) {
+        margin: 0 ;
+    }
+    .navn {
+        width: 100%;
+    }
+    .postnummer {
+        width: 100%;
+        max-width: 100%;
+    }
+    .postnummer label {
+        width: 100%;
+    }
+    .postnummer input {
+        width: 100%;
+        order: 2;
+    }
+    .postnummer input:not(:last-child) {
+        max-width: 100%;
+        margin-right: 0;
+        order: 1;
+    }
+    #fornavn {
+        order: 1;
+    }
+    .navn label[for="etternavn"] {
+        order: 3;
+        padding-top: 1rem;
+    }
+    #etternavn {
+        order: 3;
+    }
+    .adresse {
+        width: 100%;
+    }
+    .adresse input {
+        padding: 0.5rem;
+    }
+    .postnummer label[for="postnummer"] {
+        order: 2;
+        padding-top: 1rem;
+    }
+    #delivery {
+        max-width: 100%;
+    }
+    #delivery h2 {
+        max-width: 80%;
+    }
+    #delivery form {
+        max-width: 80%;
+    }
+    #payment {
+        max-width: 100%;
+    }
+    #payment h2 {
+        max-width: 80%;
+    }
+    #payment form {
+        max-width: 80%;
     }
 }
